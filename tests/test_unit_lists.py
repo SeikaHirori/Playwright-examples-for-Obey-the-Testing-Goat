@@ -13,7 +13,8 @@ class Tests_HomePage:
 
         assert found.func == home_page
 
-    def test_home_page_returns_correct_html(self, request:HttpRequest):
+    def test_home_page_returns_correct_html(self):
+        request = HttpRequest()
         response:HttpResponse = home_page(request)
         html = response.content.decode('utf8')
         
