@@ -10,4 +10,4 @@ class Tests_HomePage:
     def test_root_url_resolves_to_home_page_views(self):
         found = resolve('/')
 
-        assert found.func == home_page()
+        assert found.func == home_page
