@@ -3,3 +3,5 @@ goat_venv/*
 db.sqlite3
 geckodriver.log
 virtualenv
+__pycache__
+*.pyc
