@@ -1,2 +1,5 @@
 *goat_venv/
 goat_venv/*
+db.sqlite3
+geckodriver.log
+virtualenv
