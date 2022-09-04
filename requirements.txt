@@ -15,7 +15,6 @@ pyee==8.1.0
 pyparsing==3.0.9
 pytest==7.1.3
 pytest-base-url==2.0.0
-pytest-django==4.5.2
 pytest-forked==1.4.0
 pytest-playwright==0.3.0
 pytest-xdist==2.5.0

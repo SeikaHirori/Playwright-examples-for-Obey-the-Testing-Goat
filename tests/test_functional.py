@@ -1,6 +1,5 @@
 import pytest
 
-
 import re
 from playwright.sync_api import Page, expect
 
@@ -20,7 +19,6 @@ class Tests_superlists:
             She noticed that the page title and header states "To-Do" lists.
         """
         expect(page).to_have_title(re.compile("To-Do")) # Page title should be "To-Do"
-        assert page.title() == "To-Do", f"Returned '{page.title()}', but expected 'To-Do'"
 
 
         """
