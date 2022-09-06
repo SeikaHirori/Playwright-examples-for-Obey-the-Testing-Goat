@@ -20,6 +20,8 @@ class Tests_HomePage:
         
         assert html.startswith('<html>') == True
 
-        assert "<title>To-Do list</title>" in html
+        assert "<title>To-Do lists</title>" in html
 
         assert html.endswith('</html>') == True
+    
+    

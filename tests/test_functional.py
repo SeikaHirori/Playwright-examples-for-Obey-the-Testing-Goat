@@ -65,3 +65,6 @@ class Tests_superlists:
         """
         Satisfied, she goes back to sleep
         """
+
+
+        assert "Not complete" == ":'[", f"finish the test!"
