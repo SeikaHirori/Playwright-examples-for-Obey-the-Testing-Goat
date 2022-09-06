@@ -5,7 +5,7 @@ from playwright.sync_api import Page, expect
 
 
 
-class Tests_superlists:
+class Tests_NewVistor:
 
     def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
         
