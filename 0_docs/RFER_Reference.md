@@ -19,3 +19,17 @@
 # RFER 04
 > assert ".to_have_text()"
     >> https://playwright.dev/python/docs/test-assertions#locator-assertions-to-have-text
+
+# RFER 05
+> Locator: .type()
+    >> https://playwright.dev/docs/api/class-locator#locator-type
+
+- Equivalent to Selenium's: 
+    > input_box.send_keys()
+
+# RFER 06
+> Pressing the keyboard's "enter"
+    >> https://playwright.dev/docs/api/class-locator#locator-press
+
+- Equivalent to Selenium's:
+    > inputbox.send_keys(Keys.ENTER)  

@@ -28,24 +28,29 @@ class Tests_NewVistor:
         """
             She is invited to enter a to-do item straight away.
         """
-        # RFER 01
-        input_box:Locator = page.locator('id=id_new_item') # RFER 02
+        desired_output_to_do_item:str = 'Enter a to-do item'
 
-        expect(input_box).to_have_attribute('placeholder')
-        assert input_box.get_attribute('placeholder') == 'Enter a to-do item'
+        # RFER 01
+        locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
+
+        expect(locator_input_box).to_have_attribute('placeholder')
+        assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item
+
+        expect(page.locator('id=id_new_item').locator('placeholder')).to_have_text(desired_output_to_do_item)
 
         """    
             She types "Buy peacock feathers" into a text box (Edith's hobby
         is tying fly-fishing lures).
         """
-
+        locator_input_box.type('Buy peacock feathers') # RFER 05
 
         """
             When she hits enter, the page updates, and now the page lists
         "1: Buy peacock feathers" as an item in a to-do list.
 
         """
-            
+        locator_input_box.press('Enter') # RFER 05 & RFER 06
+
 
         """
             There is still a text box invitingher to add another item. She
