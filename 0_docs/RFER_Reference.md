@@ -33,3 +33,7 @@
 
 - Equivalent to Selenium's:
     > inputbox.send_keys(Keys.ENTER)  
+
+# RFER 07
+> Conditional Expression
+    >> https://stackoverflow.com/questions/17321138/how-can-i-use-a-conditional-expression-expression-with-if-and-else-in-a-list-c

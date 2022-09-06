@@ -2,9 +2,9 @@ from xml.sax.xmlreader import Locator
 import pytest
 
 import re
-from playwright.sync_api import Page, expect, Locator
+from playwright.sync_api import Page, expect, Locator, ElementHandle
 
-
+import time
 
 class Tests_NewVistor:
 
@@ -50,6 +50,19 @@ class Tests_NewVistor:
 
         """
         locator_input_box.press('Enter') # RFER 05 & RFER 06
+        time.sleep(1)
+
+        table:Locator = page.locator('id=id_list_table')
+        rows:list[ElementHandle] = table.element_handles('tr')
+        
+
+        desired_row_text = "1: Buy peakcock feathers"
+        # Verison 1
+        assert desired_row_text in [row.text_content() for row in rows]
+
+
+        # Verison 2
+        assert [True if row.text_content() == desired_row_text else False for row in rows] #RFER 07
 
 
         """
