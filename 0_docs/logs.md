@@ -1,4 +1,12 @@
 
+# 9/6/2022
+
+- Start Section 4, "What Are We Doing with All These Tests? (And, Refactoring)"
+> https://www.obeythetestinggoat.com/book/chapter_philosophy_and_refactoring.html
+
+
+- Finished Section 3, "Testing a Simple Home Page"
+    > https://www.obeythetestinggoat.com/book/chapter_unit_test_first_view.html
 
 # 9/4/2022
 STOPPING SESH:
