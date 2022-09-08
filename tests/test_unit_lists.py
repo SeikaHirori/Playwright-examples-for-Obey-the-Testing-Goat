@@ -4,6 +4,10 @@ from pytest_django import asserts as pydj
 from django.urls import resolve
 from django.http import HttpRequest, HttpResponse
 
+from django.template.loader import render_to_string
+
+from django.test import Client as dj_client
+
 from lists.views import home_page
 
 class Tests_HomePage:
@@ -13,7 +17,7 @@ class Tests_HomePage:
 
         assert found.func == home_page
 
-    def test_home_page_returns_correct_html(self):
+    def test_home_page_returns_correct_html_v1(self):
         request = HttpRequest()
         response:HttpResponse = home_page(request)
         html = response.content.decode('utf8')
@@ -24,4 +28,12 @@ class Tests_HomePage:
 
         assert html.strip().endswith('</html>') == True
     
+    def test_home_page_returns_correct_html_v2(self): # Uses render_to_string
+        request = HttpRequest()
+        response = home_page(request)
+        html = response.content.decode('utf8')
+        expected_html = render_to_string('lists/home.html')
+
+        assert html == expected_html
+
     
