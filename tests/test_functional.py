@@ -35,7 +35,6 @@ class Tests_NewVistor:
 
         ### Pythonic way
         assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item
-
         ### Playwright way
         expect(locator_input_box).to_have_attribute(name='placeholder', value=desired_output_to_do_item)
 
@@ -54,7 +53,7 @@ class Tests_NewVistor:
         time.sleep(1)
 
         table:Locator = page.locator('id=id_list_table')
-        rows:list[ElementHandle] = table.element_handles('tr')
+        rows:list[ElementHandle] = table.element_handles()
         
 
         desired_row_text = "1: Buy peakcock feathers"
