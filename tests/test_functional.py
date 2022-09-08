@@ -34,9 +34,9 @@ class Tests_NewVistor:
         locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
 
         ### Pythonic way
-        assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item
+        assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item, 'Placeholder should contain "Enter a to-do item"'
         ### Playwright way
-        expect(locator_input_box).to_have_attribute(name='placeholder', value=desired_output_to_do_item)
+        expect(locator_input_box).to_have_attribute(name='placeholder', value=desired_output_to_do_item), 'Placeholder should contain "Enter a to-do item"'
 
         """    
             She types "Buy peacock feathers" into a text box (Edith's hobby
@@ -61,10 +61,10 @@ class Tests_NewVistor:
 
 
         # Verison 1
-        assert True == [True if row.text_content() == desired_row_text else False for row in rows] #RFER 07
+        assert True == [True if row.text_content() == desired_row_text else False for row in rows], "New to-do item did not appear in table." #RFER 07
 
         # Verison 2
-        assert desired_row_text in [row.text_content() for row in rows]
+        assert desired_row_text in [row.text_content() for row in rows], "New to-do item did not appear in table."
 
         """
             There is still a text box invitingher to add another item. She
