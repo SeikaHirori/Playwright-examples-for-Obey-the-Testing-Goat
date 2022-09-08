@@ -13,7 +13,7 @@ from lists.views import home_page
 
 class Tests_HomePage:
 
-    def test_home_page_returns_correct_html_v3(self): # Uses Django.test's Client()
+    def test_uses_home_template(self): # Uses Django.test's Client()
         response:HttpResponse = Client().get('/')
 
         ### Directly importing pytest_django's asserts
