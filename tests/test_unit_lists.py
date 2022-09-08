@@ -1,12 +1,12 @@
 import pytest
-from pytest_django import asserts as pydj
+from pytest_django.asserts import assertTemplateUsed
 
 from django.urls import resolve
 from django.http import HttpRequest, HttpResponse
 
 from django.template.loader import render_to_string
 
-from django.test import Client as dj_client
+from django.test import Client
 
 from lists.views import home_page
 
@@ -36,4 +36,15 @@ class Tests_HomePage:
 
         assert html == expected_html
 
-    
+    def test_home_page_returns_correct_html_v3(self): # Uses Django.test's Client()
+        response:HttpResponse = Client().get('/')
+
+        html = response.content.decode('utf8')
+        
+        assert html.startswith('<html>') == True
+        assert '<title>To-Do lists</title>' in html
+        assert html.strip().endswith('</html>') == True
+
+        assertTemplateUsed(response, 'lists/home.html')
+
+        
