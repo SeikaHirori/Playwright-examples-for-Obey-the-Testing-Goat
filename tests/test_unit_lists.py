@@ -22,5 +22,8 @@ class Tests_HomePage:
         ### Example of how to call pytest_django's asserts; This easily provides a list of available option
         asserts.assertTemplateUsed(response, 'lists/home.html')
 
+    def test_can_save_a_POST_request(self):
+        response:HttpResponse = Client().post('/', data={'item_text':'A new list item'})
 
-        
+        desired_text = 'A new list item'
+        assert desired_text in response.content.decode(), "Item not in list."
