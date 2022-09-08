@@ -1,6 +1,11 @@
 
 # 9/8/2022
 
+- Started Section 5
+    >> https://www.obeythetestinggoat.com/book/chapter_post_and_database.html
+
+- Finished Section 4
+
 - Started Section 4.4, "On Refactoring"
 >> https://www.obeythetestinggoat.com/book/chapter_philosophy_and_refactoring.html#_on_refactoring
 
