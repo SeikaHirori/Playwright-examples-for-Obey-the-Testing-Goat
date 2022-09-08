@@ -27,3 +27,4 @@ class Tests_HomePage:
 
         desired_text = 'A new list item'
         assert desired_text in response.content.decode(), "Item not in list."
+        asserts.assertTemplateUsed(response, 'home.html')
