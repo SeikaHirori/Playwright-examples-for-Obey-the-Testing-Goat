@@ -50,21 +50,20 @@ class Tests_NewVistor:
 
         """
         locator_input_box.press('Enter') # RFER 05 & RFER 06
-        time.sleep(3)
+        time.sleep(1)
 
         table:Locator = page.locator('id=id_list_table')
         rows:list[ElementHandle] = table.element_handles()
         
 
         desired_row_text = "1: Buy peakcock feathers"
-        
-
 
         # Verison 1
-        assert True in [True if row.text_content() == desired_row_text else False for row in rows], "New to-do item did not appear in table." #RFER 07
+        assert True in [True if row.text_content() == desired_row_text else False for row in rows], f"New to-do item did not appear in table. Contents were:\n" #RFER 07
+        
 
         # Verison 2
-        assert desired_row_text in [row.text_content() for row in rows], "New to-do item did not appear in table."
+        assert desired_row_text in [row.text_content() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.element_handles()}" 
 
         """
             There is still a text box invitingher to add another item. She
