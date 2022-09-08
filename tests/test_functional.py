@@ -50,7 +50,7 @@ class Tests_NewVistor:
 
         """
         locator_input_box.press('Enter') # RFER 05 & RFER 06
-        time.sleep(5)
+        time.sleep(1)
 
         table:Locator = page.locator('id=id_list_table')
         rows:list[ElementHandle] = table.element_handles()
