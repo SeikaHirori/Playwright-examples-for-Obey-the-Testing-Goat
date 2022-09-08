@@ -44,5 +44,5 @@ class Tests_HomePage:
         assertTemplateUsed(response, 'lists/home.html')
 
         ### Example of how to call pytest_django's asserts; This easily provides a list of available option
-        # asserts.assertTemplateUsed(response, 'lists/home.html')
+        asserts.assertTemplateUsed(response, 'lists/home.html')
         
