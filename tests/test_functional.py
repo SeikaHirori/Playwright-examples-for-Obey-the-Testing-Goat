@@ -53,7 +53,6 @@ class Tests_NewVistor:
         time.sleep(5)
 
         table:Locator = page.locator('id=id_list_table')
-        # table:Locator = page.locator('name=item_text') # This was incorrect to add to adjust when the HTML added name="item_text"
         rows:list[ElementHandle] = table.element_handles()
         
 
