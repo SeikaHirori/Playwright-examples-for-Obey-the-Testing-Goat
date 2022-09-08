@@ -59,7 +59,7 @@ class Tests_NewVistor:
         desired_row_text = "1: Buy peakcock feathers"
 
         # Verison 1
-        assert True in [True if row.text_content() == desired_row_text else False for row in rows], f"New to-do item did not appear in table. Contents were:\n" #RFER 07
+        assert True in [True if row.text_content() == desired_row_text else False for row in rows], f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" #RFER 07
         
 
         # Verison 2
