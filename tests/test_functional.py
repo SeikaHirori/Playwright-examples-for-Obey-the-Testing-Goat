@@ -33,10 +33,11 @@ class Tests_NewVistor:
         # RFER 01
         locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
 
-        # expect(locator_input_box).to_have_attribute(value='placeholder') # FIXME - Temporarily disabling
+        ### Pythonic way
         assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item
 
-        expect(page.locator('id=id_new_item').locator('placeholder')).to_have_text(desired_output_to_do_item)
+        ### Playwright way
+        expect(locator_input_box).to_have_attribute(name='placeholder', value=desired_output_to_do_item)
 
         """    
             She types "Buy peacock feathers" into a text box (Edith's hobby
