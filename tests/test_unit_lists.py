@@ -22,6 +22,6 @@ class Tests_HomePage:
 
         assert "<title>To-Do lists</title>" in html
 
-        assert html.endswith('</html>') == True
+        assert html.strip().endswith('</html>') == True
     
     
