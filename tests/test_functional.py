@@ -57,14 +57,17 @@ class Tests_NewVistor:
         # rows:list[ElementHandle] = table.locator('tr').locator('td') # Doesn't work
         
 
-        desired_row_text = "1: Buy peakcock feathers"
+        desired_row_text_1:str = "1: Buy peacock feathers"
 
         # # Verison 1
-        # assert True in [True if row.text_content() == desired_row_text else False for row in rows], f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" #RFER 07
+        # assert True in [True if row.text_content() == desired_row_text_1 else False for row in rows], f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" #RFER 07
         
 
         # Verison 2 - I DID THIS BEFORE I SAW IT IN THE BOOK WOOT
-        assert desired_row_text in [row.text_content() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
+        assert desired_row_text_1 in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
+
+        desired_row_text_2:str = '2: Use peacock feathers to make a fly'
+        assert desired_row_text_2 in [row.inner_text() for row in rows]
 
         """
             There is still a text box invitingher to add another item. She
