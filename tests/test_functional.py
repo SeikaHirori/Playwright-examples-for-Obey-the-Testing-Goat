@@ -14,15 +14,15 @@ class Tests_NewVistor:
             Edith heard about a new online to-do app. 
         She checks out the website.
         """
-        page.goto("http://localhost:8000")
+        page.goto("http://localhost:8000/")
 
         """
             She noticed that the page title and header states "To-Do" lists.
         """
-        expect(page).to_have_title(re.compile("To-Do"))
+        expect(page).to_have_title(re.compile("To-Do lists"))
 
         header_text:Locator = page.locator('role=heading[level=1]') # RFER 3
-        expect(header_text).to_have_text(re.compile(r"To-Do")) # RFER 04
+        expect(header_text).to_have_text(re.compile(r"To-Do list")) # RFER 04
 
 
         """
