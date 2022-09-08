@@ -50,9 +50,10 @@ class Tests_NewVistor:
 
         """
         locator_input_box.press('Enter') # RFER 05 & RFER 06
-        time.sleep(1)
+        time.sleep(5)
 
         table:Locator = page.locator('id=id_list_table')
+        # table:Locator = page.locator('name=item_text') # This was incorrect to add to adjust when the HTML added name="item_text"
         rows:list[ElementHandle] = table.element_handles()
         
 
@@ -61,7 +62,7 @@ class Tests_NewVistor:
 
 
         # Verison 1
-        assert True == [True if row.text_content() == desired_row_text else False for row in rows], "New to-do item did not appear in table." #RFER 07
+        assert True in [True if row.text_content() == desired_row_text else False for row in rows], "New to-do item did not appear in table." #RFER 07
 
         # Verison 2
         assert desired_row_text in [row.text_content() for row in rows], "New to-do item did not appear in table."
