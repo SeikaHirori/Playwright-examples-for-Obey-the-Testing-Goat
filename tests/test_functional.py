@@ -1,3 +1,4 @@
+from cmath import exp
 from xml.sax.xmlreader import Locator
 import pytest
 
@@ -33,9 +34,9 @@ class Tests_NewVistor:
         # RFER 01
         locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
 
-        ### Pythonic way
+        ### Pythonic way - 01
         assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item, 'Placeholder should contain "Enter a to-do item"'
-        ### Playwright way
+        ### Playwright way - 01
         expect(locator_input_box).to_have_attribute(name='placeholder', value=desired_output_to_do_item), 'Placeholder should contain "Enter a to-do item"'
 
         """    
@@ -64,7 +65,11 @@ class Tests_NewVistor:
         
 
         # Verison 2 - I DID THIS BEFORE I SAW IT IN THE BOOK WOOT
+
+        ### Pythonic Way - 02
         assert desired_row_text_1 in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
+        ### Playwright Way - 02
+        expect(table).to_have_text(desired_row_text_1)
 
         desired_row_text_2:str = '2: Use peacock feathers to make a fly'
         assert desired_row_text_2 in [row.inner_text() for row in rows]
