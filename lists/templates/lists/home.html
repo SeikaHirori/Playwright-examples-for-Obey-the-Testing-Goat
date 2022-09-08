@@ -7,7 +7,7 @@
         <h1>Your To-Do list</h1>
         <form action="POST">
             {% csrf_token %}
-            <input name="item_text" id="id_new_item" placeholder="Enter a to-do item">
+            <input name="item_text" id="id_new_item" placeholder="Enter a to-do item"> <!-- 'name=item_text' is used for request.POST/request.get  -->
         </form>
         
         <table id="id_list_table">
