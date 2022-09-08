@@ -57,13 +57,14 @@ class Tests_NewVistor:
         
 
         desired_row_text = "1: Buy peakcock feathers"
-        # Verison 1
-        assert desired_row_text in [row.text_content() for row in rows]
+        
 
+
+        # Verison 1
+        assert True == [True if row.text_content() == desired_row_text else False for row in rows] #RFER 07
 
         # Verison 2
-        assert [True if row.text_content() == desired_row_text else False for row in rows] #RFER 07
-
+        assert desired_row_text in [row.text_content() for row in rows]
 
         """
             There is still a text box invitingher to add another item. She
