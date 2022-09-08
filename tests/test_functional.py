@@ -33,7 +33,7 @@ class Tests_NewVistor:
         # RFER 01
         locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
 
-        expect(locator_input_box).to_have_attribute('placeholder')
+        # expect(locator_input_box).to_have_attribute(value='placeholder') # FIXME - Temporarily disabling
         assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item
 
         expect(page.locator('id=id_new_item').locator('placeholder')).to_have_text(desired_output_to_do_item)
