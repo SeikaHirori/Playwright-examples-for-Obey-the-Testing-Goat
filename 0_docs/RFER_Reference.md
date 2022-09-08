@@ -37,3 +37,24 @@
 # RFER 07
 > Conditional Expression
     >> https://stackoverflow.com/questions/17321138/how-can-i-use-a-conditional-expression-expression-with-if-and-else-in-a-list-c
+
+# RFER 08
+- Playwright's:
+> .element_handles() 
+... equalivent to Selenium's:
+> .find_elements_by_tag_name('tr')
+
+>> https://playwright.dev/docs/api/class-elementhandle
+
+- Apparently, Playwright doesn't recommend using elementhandle. Not sure what the alterative is as it only mentions:
+> The use of ElementHandle is discouraged, use Locator objects and web-first assertions instead.
+
+
+# RFER 09
+
+- Playwright's
+> .inner_text()
+is equal to Selenium's
+> .text()
+
+>> https://playwright.dev/docs/api/class-locator#locator-inner-text

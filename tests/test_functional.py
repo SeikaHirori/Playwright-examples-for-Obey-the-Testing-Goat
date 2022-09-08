@@ -53,7 +53,8 @@ class Tests_NewVistor:
         time.sleep(1)
 
         table:Locator = page.locator('id=id_list_table')
-        rows:list[ElementHandle] = table.element_handles()
+        rows:list[ElementHandle] = table.element_handles() # RFER 08
+        # rows:list[ElementHandle] = table.locator('tr').locator('td') # Doesn't work
         
 
         desired_row_text = "1: Buy peakcock feathers"
@@ -63,7 +64,7 @@ class Tests_NewVistor:
         
 
         # Verison 2 - I DID THIS BEFORE I SAW IT IN THE BOOK WOOT
-        assert desired_row_text in [row.text_content() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" 
+        assert desired_row_text in [row.text_content() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
 
         """
             There is still a text box invitingher to add another item. She

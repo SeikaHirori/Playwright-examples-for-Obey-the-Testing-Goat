@@ -1,6 +1,10 @@
 
 # 9/8/2022
 
+- STOPPING SESH @
+    - Section 5.4
+    >> https://www.obeythetestinggoat.com/book/chapter_post_and_database.html#_three_strikes_and_refactor
+
 - Started Section 5
     >> https://www.obeythetestinggoat.com/book/chapter_post_and_database.html
 
