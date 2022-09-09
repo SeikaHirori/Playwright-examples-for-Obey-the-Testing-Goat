@@ -11,7 +11,7 @@ import time
 
 class Tests_NewVistor:
 
-    def check_for_row_in_list_table(self, row_text:str, page:Page = None):
+    def check_for_row_in_list_table(self, row_text:str, page:Page): # Page is needed for Playwright; It isn't needed for Selenium SO it's parameter would be "check_for_row_in_list_table(self, row_text:str)"
         #### Selenium style - B07
         # table = self.browser.find_element_by_id('id_list_table')
         # rows = table.find_elements_by_tag_name('tr')  
@@ -132,11 +132,14 @@ class Tests_NewVistor:
         assert desired_row_text_1 in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
         #### Playwright Way - A02
         expect(table).to_have_text(desired_row_text_1)
+        self.check_for_row_in_list_table(desired_row_text_1, page)
 
 
         desired_row_text_2:str = '2: Use peacock feathers to make a fly'
+
+        self.check_for_row_in_list_table(desired_row_text_2, page)
         #### Pythonic Way - A03
-        assert desired_row_text_2 in [row.inner_text() for row in rows]
+        assert desired_row_text_2 in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09 
         #### Playwright Way - A03
         expect(table).to_have_text(desired_row_text_2)
 
