@@ -20,7 +20,6 @@ class Tests_NewVistor:
 
         table:Locator = page.locator('id=id_list_table')
         rows:list[ElementHandle] = table.element_handles() # RFER 08
-        # rows:list[ElementHandle] = table.locator('tr').locator('td') # Doesn't work
 
         #### Pythonic Way - A04
         assert row_text in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
@@ -116,32 +115,14 @@ class Tests_NewVistor:
         locator_input_box.press('Enter') # RFER 05 & RFER 06
         time.sleep(1)
 
-
-        table:Locator = page.locator('id=id_list_table')
-        rows:list[ElementHandle] = table.element_handles() # RFER 08
-        # rows:list[ElementHandle] = table.locator('tr').locator('td') # Doesn't work
-
         desired_row_text_1:str = "1: Buy peacock feathers"
-
-        # # Verison 1
-        # assert True in [True if row.text_content() == desired_row_text_1 else False for row in rows], f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" #RFER 07
-        
-
-        # Verison 2 - I DID THIS BEFORE I SAW IT IN THE BOOK WOOT
-        #### Pythonic Way - A02
-        assert desired_row_text_1 in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
-        #### Playwright Way - A02
-        expect(table).to_have_text(desired_row_text_1)
         self.check_for_row_in_list_table(desired_row_text_1, page)
 
 
+        self.check_for_row_in_list_table(desired_row_text_1, page)
         desired_row_text_2:str = '2: Use peacock feathers to make a fly'
-
         self.check_for_row_in_list_table(desired_row_text_2, page)
-        #### Pythonic Way - A03
-        assert desired_row_text_2 in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09 
-        #### Playwright Way - A03
-        expect(table).to_have_text(desired_row_text_2)
+
 
         """
             There is still a text box invitingher to add another item. She
