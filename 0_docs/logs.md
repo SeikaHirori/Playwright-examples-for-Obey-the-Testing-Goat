@@ -1,7 +1,10 @@
 
 # 9/9/2022
 
--
+- Now starting Section 5.5: The Django ORM and Our First Model
+    >> https://www.obeythetestinggoat.com/book/chapter_post_and_database.html#_the_django_orm_and_our_first_model
+
+- Finished Section 5.4 
 
 - Included comment'd Selenium code to use as a reference when following the OtTG book.
     - Formatted the code in a chunky comment as it would be easier to reference. It does make the readability harder, but the objective is to easily find what the book is talking about.
