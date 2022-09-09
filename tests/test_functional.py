@@ -1,27 +1,46 @@
-from cmath import exp
-from xml.sax.xmlreader import Locator
 import pytest
 
-import re
+#### Selenium style - B00: Import libary
+# from selenium import webdriver 
+####
+
 from playwright.sync_api import Page, expect, Locator, ElementHandle
+import re
 
 import time
 
 class Tests_NewVistor:
 
     def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
-        
+
+        #### Selenium style - B01
+        # browser = webdriver.Firefox()
+        ####
+
+
+
         """
             Edith heard about a new online to-do app. 
         She checks out the website.
         """
+        #### Selenium style - B02:
+        # browser.get('http://localhost:8000')
+        ####
+
         page.goto("http://localhost:8000/")
+
+
 
         """
             She noticed that the page title and header states "To-Do" lists.
         """
-        expect(page).to_have_title(re.compile("To-Do lists"))
+        #### Selenium style - B03
+        # self.assertIn('To-Do', self.browser.title)
+        # header_text = self.browser.find_element_by_tag_name('h1').text  
+        # self.assertIn('To-Do', header_text)
+        ####
 
+        expect(page).to_have_title(re.compile("To-Do lists"))
         header_text:Locator = page.locator('role=heading[level=1]') # RFER 3
         expect(header_text).to_have_text(re.compile(r"To-Do list")) # RFER 04
 
@@ -29,34 +48,60 @@ class Tests_NewVistor:
         """
             She is invited to enter a to-do item straight away.
         """
+        #### Selenium style - B04
+        # inputbox = self.browser.find_element_by_id('id_new_item')  
+        # self.assertEqual(
+        #     inputbox.get_attribute('placeholder'),
+        #     'Enter a to-do item'
+        # )
+        ####
+
         desired_output_to_do_item:str = 'Enter a to-do item'
 
         # RFER 01
         locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
 
-        ### Pythonic way - 01
+        #### Pythonic way - A01
         assert locator_input_box.get_attribute('placeholder') == desired_output_to_do_item, 'Placeholder should contain "Enter a to-do item"'
-        ### Playwright way - 01
+        #### Playwright way - A01
         expect(locator_input_box).to_have_attribute(name='placeholder', value=desired_output_to_do_item), 'Placeholder should contain "Enter a to-do item"'
+
+
 
         """    
             She types "Buy peacock feathers" into a text box (Edith's hobby
         is tying fly-fishing lures).
         """
+        #### Selenium style - B05
+        # inputbox.send_keys('Buy peacock feathers')  
+        ####
+
         locator_input_box.type('Buy peacock feathers') # RFER 05
+
+
 
         """
             When she hits enter, the page updates, and now the page lists
         "1: Buy peacock feathers" as an item in a to-do list.
 
         """
+        #### Selenium style - B06
+        # inputbox.send_keys(Keys.ENTER)  
+        # time.sleep(1)  
+
+        # table = self.browser.find_element_by_id('id_list_table')
+        # rows = table.find_elements_by_tag_name('tr')  
+        # self.assertTrue(
+        #     any(row.text == '1: Buy peacock feathers' for row in rows)
+        # )
+        ####
+
         locator_input_box.press('Enter') # RFER 05 & RFER 06
         time.sleep(1)
 
         table:Locator = page.locator('id=id_list_table')
         rows:list[ElementHandle] = table.element_handles() # RFER 08
         # rows:list[ElementHandle] = table.locator('tr').locator('td') # Doesn't work
-        
 
         desired_row_text_1:str = "1: Buy peacock feathers"
 
@@ -65,40 +110,65 @@ class Tests_NewVistor:
         
 
         # Verison 2 - I DID THIS BEFORE I SAW IT IN THE BOOK WOOT
-
-        ### Pythonic Way - 02
+        #### Pythonic Way - A02
         assert desired_row_text_1 in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
-        ### Playwright Way - 02
+        #### Playwright Way - A02
         expect(table).to_have_text(desired_row_text_1)
 
+
         desired_row_text_2:str = '2: Use peacock feathers to make a fly'
+        #### Pythonic Way - A03
         assert desired_row_text_2 in [row.inner_text() for row in rows]
+        #### Playwright Way - A03
+        expect(table).to_have_text(desired_row_text_2)
 
         """
             There is still a text box invitingher to add another item. She
         enters "Use peacock feathers to make a fly" (Edith is very methodical).
         """
+        #### Selenium style - B07
+        
+        ####
+
 
 
         """
             The page updates again, and now shows both items on her list.
         
         """
+        #### Selenium style - B08
+        
+        ####
+
+
 
         """
             Edith wonders whether the site will remember her list. Then she
         sees the site has generate a unique URL for her -- there is some 
         explantory text to that effect.
         """
+        #### Selenium style - B09
+        
+        ####
+
 
 
         """
             She vists that URL - her to-do list is still there.
         """
+        #### Selenium style - B10
+        
+        ####
+
+
 
         """
         Satisfied, she goes back to sleep
         """
+        #### Selenium style - B11
+        
+        ####
+
 
 
         assert "Not complete" == ":'[", f"finish the test!"
