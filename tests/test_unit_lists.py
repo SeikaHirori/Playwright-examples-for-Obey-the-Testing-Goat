@@ -10,6 +10,12 @@ from django.template.loader import render_to_string
 from django.test import Client
 
 from lists.views import home_page
+from lists.models import Item
+
+class Tests_ItemModel:
+
+    def test_saving_and_retrieving_items(self):
+        pass
 
 class Tests_HomePage:
 
