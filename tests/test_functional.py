@@ -102,14 +102,9 @@ class Tests_NewVistor:
 
         """
         #### Selenium style - B06
-        # inputbox.send_keys(Keys.ENTER)  
-        # time.sleep(1)  
-
-        # table = self.browser.find_element_by_id('id_list_table')
-        # rows = table.find_elements_by_tag_name('tr')  
-        # self.assertTrue(
-        #     any(row.text == '1: Buy peacock feathers' for row in rows)
-        # )
+        # inputbox.send_keys(Keys.ENTER)
+        # time.sleep(1)
+        # self.check_for_row_in_list_table('1: Buy peacock feathers')
         ####
 
         locator_input_box.press('Enter') # RFER 05 & RFER 06
@@ -119,29 +114,34 @@ class Tests_NewVistor:
         self.check_for_row_in_list_table(desired_row_text_1, page)
 
 
-        self.check_for_row_in_list_table(desired_row_text_1, page)
-        desired_row_text_2:str = '2: Use peacock feathers to make a fly'
-        self.check_for_row_in_list_table(desired_row_text_2, page)
-
 
         """
             There is still a text box invitingher to add another item. She
         enters "Use peacock feathers to make a fly" (Edith is very methodical).
         """
-        #### Selenium style - B0
-        
+        #### Selenium style - B08
+        # inputbox = self.browser.find_element_by_id('id_new_item')
+        # inputbox.send_keys('Use peacock feathers to make a fly')
+        # inputbox.send_keys(Keys.ENTER)
+        # time.sleep(1)
         ####
-
-
+        locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
+        locator_input_box.type('Use peacock feathers to make a fly')
+        locator_input_box.press('Enter')
+        time.sleep(1)
 
         """
             The page updates again, and now shows both items on her list.
         
         """
         #### Selenium style - B0
-        
+        # self.check_for_row_in_list_table('1: Buy peacock feathers')
+        # self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
         ####
 
+        self.check_for_row_in_list_table(desired_row_text_1, page)
+        desired_row_text_2:str = '2: Use peacock feathers to make a fly'
+        self.check_for_row_in_list_table(desired_row_text_2, page)
 
 
         """
