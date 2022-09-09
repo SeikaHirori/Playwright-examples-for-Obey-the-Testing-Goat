@@ -11,6 +11,9 @@ import time
 
 class Tests_NewVistor:
 
+    # def check_for_row_in_list_table(self, row_text):
+
+
     def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
 
         #### Selenium style - B01
@@ -98,6 +101,7 @@ class Tests_NewVistor:
 
         locator_input_box.press('Enter') # RFER 05 & RFER 06
         time.sleep(1)
+
 
         table:Locator = page.locator('id=id_list_table')
         rows:list[ElementHandle] = table.element_handles() # RFER 08

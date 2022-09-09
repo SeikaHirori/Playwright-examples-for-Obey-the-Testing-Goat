@@ -1,4 +1,11 @@
 
+# 9/9/2022
+
+-
+
+- Included comment'd Selenium code to use as a reference when following the OtTG book.
+    - Formatted the code in a chunky comment as it would be easier to reference. It does make the readability harder, but the objective is to easily find what the book is talking about.
+
 # 9/8/2022
 
 - STOPPING SESH @
