@@ -11,7 +11,21 @@ import time
 
 class Tests_NewVistor:
 
-    # def check_for_row_in_list_table(self, row_text):
+    def check_for_row_in_list_table(self, row_text:str, page:Page = None):
+        #### Selenium style - B07
+        # table = self.browser.find_element_by_id('id_list_table')
+        # rows = table.find_elements_by_tag_name('tr')  
+        # self.assertIn(row_text, [row.text for row in rows])
+        ####
+
+        table:Locator = page.locator('id=id_list_table')
+        rows:list[ElementHandle] = table.element_handles() # RFER 08
+        # rows:list[ElementHandle] = table.locator('tr').locator('td') # Doesn't work
+
+        #### Pythonic Way - A04
+        assert row_text in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
+        #### Playwright Way - A04
+        expect(table).to_have_text(row_text), f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}"
 
 
     def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
@@ -130,7 +144,7 @@ class Tests_NewVistor:
             There is still a text box invitingher to add another item. She
         enters "Use peacock feathers to make a fly" (Edith is very methodical).
         """
-        #### Selenium style - B07
+        #### Selenium style - B0
         
         ####
 
@@ -140,7 +154,7 @@ class Tests_NewVistor:
             The page updates again, and now shows both items on her list.
         
         """
-        #### Selenium style - B08
+        #### Selenium style - B0
         
         ####
 
@@ -151,7 +165,7 @@ class Tests_NewVistor:
         sees the site has generate a unique URL for her -- there is some 
         explantory text to that effect.
         """
-        #### Selenium style - B09
+        #### Selenium style - B0
         
         ####
 
@@ -160,7 +174,7 @@ class Tests_NewVistor:
         """
             She vists that URL - her to-do list is still there.
         """
-        #### Selenium style - B10
+        #### Selenium style - B1
         
         ####
 
@@ -169,7 +183,7 @@ class Tests_NewVistor:
         """
         Satisfied, she goes back to sleep
         """
-        #### Selenium style - B11
+        #### Selenium style - B1
         
         ####
 
