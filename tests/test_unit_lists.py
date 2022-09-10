@@ -15,11 +15,11 @@ from lists.models import Item
 class Tests_ItemModel:
 
     def test_saving_and_retrieving_items(self):
-        first_item = Item()
+        first_item:Item = Item()
         first_item.text = 'The first (ever) list item'
         first_item.save()
 
-        second_item = Item()
+        second_item:Item = Item()
         second_item.text = 'Item the second'
         second_item.save()
 
