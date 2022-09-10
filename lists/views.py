@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
 
+from lists.models import Item
+
 # Create your views here.
 
 def home_page(request:HttpRequest):
-    # if request.method == 'POST':
-    #     return HttpResponse(request.POST['item_text']) # TODO
+    item = Item()
+    item.text = request.POST.get('item_text', '')
+    item.save() # FIXME
+
     new_item_text = request.POST.get('item_text', '')
 
     # return render(request, 'lists/home.html')
