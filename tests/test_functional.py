@@ -20,9 +20,17 @@ class Tests_NewVistor:
 
         table:Locator = page.locator('id=id_list_table')
         
-        ### Version 1
-        rows:str = table.text_content() # RFER 08
-        rows_list:list[str] = rows.strip().splitlines()
+        ### String way
+        rows:str = table.inner_text() # RFER 08
+        
+        # Version 1 - It only strips first element
+        rows_list:list[str] = rows.replace(" ", " ").strip().splitlines() # RFER 13abr
+        
+        # # Version 2 -  # RFER 12
+        # rows_list: list[str] = []
+        # count:int = table.count()
+        
+        
 
         #### Pythonic Way - A04
         assert row_text in rows

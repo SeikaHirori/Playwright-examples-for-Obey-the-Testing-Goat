@@ -69,3 +69,12 @@ is equal to Selenium's
 # RFER 11
 - QuerySet
 >> https://www.fullstackpython.com/django-db-models-query-queryset-examples.html
+
+# RFER 12
+Attempting to apply removing whitespace to ALL elements
+- Pattern 2:
+    >> https://playwright.dev/python/docs/locators#lists
+
+# RFER 13
+Removing whitespace in middle of string
+>> https://stackoverflow.com/questions/8270092/remove-all-whitespace-in-a-string
