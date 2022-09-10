@@ -58,3 +58,7 @@ is equal to Selenium's
 > .text()
 
 >> https://playwright.dev/docs/api/class-locator#locator-inner-text
+
+# RFER 10
+
+>>
