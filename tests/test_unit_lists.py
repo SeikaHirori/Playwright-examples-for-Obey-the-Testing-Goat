@@ -60,3 +60,7 @@ class Tests_HomePage:
 
         assert desired_text in response.content.decode(), "Item not in list."
         asserts.assertTemplateUsed(response, 'lists/home.html')
+
+    def test_only_saves_items_when_necessary(self):
+        response: HttpResponse = Client().get('/')
+        assert Item.objects.count() == 0
