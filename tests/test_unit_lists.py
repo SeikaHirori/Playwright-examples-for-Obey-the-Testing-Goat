@@ -27,11 +27,11 @@ class Tests_ItemModel:
         second_item.text = 'Item the second'
         second_item.save()
 
-        saved_items:QuerySet = Item.objects.all() # RFER 11
+        saved_items: QuerySet = Item.objects.all() # RFER 11
         assert saved_items.count() == 2
 
-        first_saved_item:Item = saved_items[0]
-        second_saved_item:Item = saved_items[1]
+        first_saved_item: Item = saved_items[0]
+        second_saved_item: Item = saved_items[1]
         assert first_saved_item.text == 'The first (ever) list item'
         assert second_saved_item.text == 'Item the second'
 
