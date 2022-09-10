@@ -24,7 +24,7 @@ class Tests_NewVistor:
         rows:str = table.inner_text() # RFER 08
         
         # Version 1 - It only strips first element
-        rows_list:list[str] = rows.replace(" ", " ").strip().splitlines() # RFER 13abr
+        rows_list:list[str] = table.inner_text().strip().splitlines() # RFER 13 # Git commit note
         
         # # Version 2 -  # RFER 12
         # rows_list: list[str] = []
@@ -35,7 +35,7 @@ class Tests_NewVistor:
         #### Pythonic Way - A04
         assert row_text in rows
         
-        assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09
+        assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09 # Git commit note
         
         
         #### Playwright Way - A04
