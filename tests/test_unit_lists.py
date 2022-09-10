@@ -11,6 +11,9 @@ from django.test import Client
 
 from lists.views import home_page
 from lists.models import Item
+
+from django.db.models import QuerySet
+
 @pytest.mark.django_db # RFER 10
 class Tests_ItemModel:
 
@@ -23,13 +26,13 @@ class Tests_ItemModel:
         second_item.text = 'Item the second'
         second_item.save()
 
-        saved_items = Item.objects.all()
+        saved_items:QuerySet = Item.objects.all()
         assert saved_items.count() == 2
 
-        first_saved_item = saved_items[0]
-        second_saved_item = saved_items[1]
-        assert first_saved_item == 'The first (ever) list item'
-        assert second_saved_item == 'Item the second'
+        first_saved_item:Item = saved_items[0]
+        second_saved_item:Item = saved_items[1]
+        assert first_saved_item.text == 'The first (ever) list item'
+        assert second_saved_item.text == 'Item the second'
 
 class Tests_HomePage:
 
