@@ -12,7 +12,8 @@ from django.test import Client
 from lists.views import home_page
 from lists.models import Item
 
-from django.db.models import QuerySet
+# from django.db.models import QuerySet
+from django.db.models.query import QuerySet # RFER 11
 
 @pytest.mark.django_db # RFER 10
 class Tests_ItemModel:
@@ -26,7 +27,7 @@ class Tests_ItemModel:
         second_item.text = 'Item the second'
         second_item.save()
 
-        saved_items:QuerySet = Item.objects.all()
+        saved_items:QuerySet = Item.objects.all() # RFER 11
         assert saved_items.count() == 2
 
         first_saved_item:Item = saved_items[0]
