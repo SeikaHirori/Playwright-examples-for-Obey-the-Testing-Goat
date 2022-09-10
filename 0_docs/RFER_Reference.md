@@ -60,5 +60,8 @@ is equal to Selenium's
 >> https://playwright.dev/docs/api/class-locator#locator-inner-text
 
 # RFER 10
-
->>
+@pytest.mark.django_db
+- Error: 
+> E       RuntimeError: Database access not allowed, use the "django_db" mark, or the "db" or "transactional_db" fixtures to enable it.
+>> https://stackoverflow.com/a/57692215
+>> https://stackoverflow.com/a/66303954

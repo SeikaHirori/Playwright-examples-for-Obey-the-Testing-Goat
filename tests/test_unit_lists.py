@@ -11,7 +11,7 @@ from django.test import Client
 
 from lists.views import home_page
 from lists.models import Item
-
+@pytest.mark.django_db # RFER 10
 class Tests_ItemModel:
 
     def test_saving_and_retrieving_items(self):
