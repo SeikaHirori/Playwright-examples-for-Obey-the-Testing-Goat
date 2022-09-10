@@ -24,7 +24,7 @@ class Tests_NewVistor:
         rows:str = table.inner_text() # RFER 08
         
         # Version 1 - It only strips first element
-        rows_list:list[str] = table.inner_text().strip().splitlines() # RFER 13 # Git commit note
+        rows_list:list[str] = table.inner_text().splitlines() # RFER 13 # Git commit note
         
         # # Version 2 -  # RFER 12
         # rows_list: list[str] = []
