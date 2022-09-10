@@ -11,6 +11,7 @@ def home_page(request: HttpRequest):
         Item.objects.create(text=request.POST['item_text'])
         return redirect('/')
 
+    items = Item.objects.all()
     return render(request, 'lists/home.html', {
-
+        'items': items,
     })

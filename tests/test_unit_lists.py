@@ -41,7 +41,7 @@ class Tests_ItemModel:
 class Tests_HomePage:
 
     def test_uses_home_template(self):  # Uses Django.test's Client()
-        response: HttpResponse = Client().get('/')
+        response:HttpResponse = Client().get('/')
 
         ### Directly importing pytest_django's asserts
         assertTemplateUsed(response, 'lists/home.html')
@@ -52,15 +52,29 @@ class Tests_HomePage:
     def test_can_save_a_POST_request(self):
         desired_text = 'A new list item'
 
-        response: HttpResponse = Client().post('/', data={'item_text': 'A new list item'})
+        Client().post('/', data={'item_text': 'A new list item'})
 
         assert Item.objects.count() == 1
         new_item: Item = Item.objects.first()
         assert new_item.text == desired_text
 
+    def test_redirects_after_POST(self):
+        response: HttpResponse = Client().post('/', data={'item_text': 'A new list item'})
         assert response.status_code == 302
         assert response['location'] == '/'
 
     def test_only_saves_items_when_necessary(self):
         response: HttpResponse = Client().get('/')
         assert Item.objects.count() == 0
+
+    def test_displays_all_list_items(self):
+        itemey_1 = 'itemey 1'
+        itemey_2 = 'itemey 2'
+
+        Item.objects.create(text=itemey_1)
+        Item.objects.create(text=itemey_2)
+
+        response: HttpResponse = Client().get('/')
+
+        assert itemey_1 in response.content.decode()
+        assert itemey_2 in response.content.decode()
