@@ -58,8 +58,8 @@ class Tests_HomePage:
         new_item: Item = Item.objects.first()
         assert new_item.text == desired_text
 
-        assert desired_text in response.content.decode(), "Item not in list."
-        asserts.assertTemplateUsed(response, 'lists/home.html')
+        assert response.status_code == 302
+        assert response['location'] == '/'
 
     def test_only_saves_items_when_necessary(self):
         response: HttpResponse = Client().get('/')
