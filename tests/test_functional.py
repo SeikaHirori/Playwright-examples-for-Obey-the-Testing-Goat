@@ -19,12 +19,19 @@ class Tests_NewVistor:
         ####
 
         table:Locator = page.locator('id=id_list_table')
-        rows:list[ElementHandle] = table.element_handles() # RFER 08
+        
+        ### Version 1
+        rows:str = table.text_content() # RFER 08
+        rows_list:list[str] = rows.strip().splitlines()
 
         #### Pythonic Way - A04
-        assert row_text in [row.inner_text() for row in rows], f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}" # RFER 09
+        assert row_text in rows
+        
+        assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09
+        
+        
         #### Playwright Way - A04
-        expect(table).to_have_text(row_text), f"New to-do item did not appear in table. Contents were:\n {table.inner_text()}"
+        expect(table).to_contain_text(row_text)
 
 
     def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
