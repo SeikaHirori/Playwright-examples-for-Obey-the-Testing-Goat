@@ -1,0 +1,29 @@
+# use command in Docker-compose.yml's folder:
+## docker compose up
+## docker compose down
+
+version: '3.8'
+
+services:
+
+  python-docker:
+    build: .
+
+    volumes:
+      - pytest_docker_data:/usr/src/app/reports/
+
+    container_name: Obey_the_testing_goat
+
+    restart: on-failure
+
+    # # For testing only... Purpose: See how the directory is organized
+    # ## At the moment, 
+    # command: ["ls"]
+
+    # primary command
+    ## "--lf": runs failed tests first
+    ## "l": lists variables and their assigned values
+    command: ["pytest",'-n','auto', "-v", "--lf", "-l", "--suppress-tests-failed-exit-code", "--continue-on-collection-errors","--junitxml=reports/results.xml", "--html=report.html", "--self-contained-html"]
+  
+volumes:
+  pytest_docker_data:
