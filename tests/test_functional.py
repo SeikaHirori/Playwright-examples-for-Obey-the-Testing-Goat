@@ -19,7 +19,7 @@ class Tests_NewVistor:
         ####
 
         table:Locator = page.locator('id=id_list_table')
-        
+                
         # String way
         rows:str = table.inner_text() # RFER 08 # Stores whole list in a string that also contains "\n"
         
@@ -33,7 +33,6 @@ class Tests_NewVistor:
         # List way
         rows_list:list[str] = table.inner_text().splitlines()
         assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09
-        
 
 
     def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
