@@ -1,4 +1,8 @@
 
+# 9/10/2022
+
+- Completed Section 5
+
 # 9/9/2022
 
 - Now starting Section 5.5: The Django ORM and Our First Model
