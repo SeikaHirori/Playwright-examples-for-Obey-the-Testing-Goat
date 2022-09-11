@@ -26,7 +26,7 @@ services:
     # primary command
     ## "--lf": runs failed tests first
     ## "l": lists variables and their assigned values
-    command: ["pytest",'-n','auto', "-v", "--lf", "-l", "--suppress-tests-failed-exit-code", "--continue-on-collection-errors","--junitxml=reports/results.xml", "--html=report.html", "--self-contained-html"]
+    command: ["pytest",'-n','auto', "-v", "--lf", "-l", "--showlocals","--suppress-tests-failed-exit-code", "--continue-on-collection-errors","--junitxml=reports/results.xml", "--html=report.html", "--self-contained-html"]
   
 volumes:
   pytest_docker_data:
