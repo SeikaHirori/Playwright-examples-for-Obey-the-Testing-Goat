@@ -21,25 +21,20 @@ class Tests_NewVistor:
         table:Locator = page.locator('id=id_list_table')
         
         ### String way
-        rows:str = table.inner_text() # RFER 08
+        rows:str = table.inner_text() # RFER 08 # Stores whole list in a string that also contains "\n"
         
         # Version 1 - It only strips first element
-        rows_list:list[str] = table.inner_text().splitlines() # RFER 13 # Git commit note
-        
-        # # Version 2 -  # RFER 12
-        # rows_list: list[str] = []
-        # count:int = table.count()
-        
-        
+        rows_list:list[str] = table.inner_text().splitlines()
 
-        #### Pythonic Way - A04
+
+        #### Pythonic Way - A04.1
         assert row_text in rows
-        
-        assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09 # Git commit note
-        
-        
-        #### Playwright Way - A04
+        #### Playwright Way - A04: This is similar to the Pythonic Way - A04.01
         expect(table).to_contain_text(row_text)
+        
+        #### Pythonic Way - A04.2: Using rows_list:list[str] is more precise than rows:str
+        assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09
+        
 
 
     def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
