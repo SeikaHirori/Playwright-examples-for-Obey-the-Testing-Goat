@@ -1,5 +1,11 @@
 
 
+# 9/15/2022
+
+
+- Starting Section 6
+    >> https://www.obeythetestinggoat.com/book/chapter_explicit_waits_1.html
+    
 # 9/10/2022
 - Failed to setup Docker with Playwright.
     - Docker setup does not work.
