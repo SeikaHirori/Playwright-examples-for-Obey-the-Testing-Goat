@@ -78,3 +78,7 @@ Attempting to apply removing whitespace to ALL elements
 # RFER 13
 Removing whitespace in middle of string
 >> https://stackoverflow.com/questions/8270092/remove-all-whitespace-in-a-string
+
+# RFER 14
+Playwright and Django's LiveServerTestCase
+>> https://devblogs.microsoft.com/python/announcing-playwright-for-python-reliable-end-to-end-testing-for-the-web/
