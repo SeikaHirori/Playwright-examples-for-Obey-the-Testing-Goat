@@ -9,7 +9,8 @@ import re
 
 import time
 
-class Tests_NewVistor:
+from django.test import LiveServerTestCase
+class Tests_NewVistor(LiveServerTestCase):
 
     def check_for_row_in_list_table(self, row_text:str, page:Page): # Page is needed for Playwright; It isn't needed for Selenium SO it's parameter would be "check_for_row_in_list_table(self, row_text:str)"
         #### Selenium style - B07
