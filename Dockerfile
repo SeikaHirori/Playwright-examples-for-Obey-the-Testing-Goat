@@ -10,11 +10,12 @@ RUN apt install python3-pip -y
 WORKDIR /usr/src/app
 
 COPY requirements.txt .
+COPY . .
+
 RUN pip3 install --no-cache-dir -r requirements.txt
 RUN pip3 install playwright
-RUN playwright install --with-deps firefox
-
-COPY . .
+RUN playwright install
+RUN playwright install-deps
 
 
 

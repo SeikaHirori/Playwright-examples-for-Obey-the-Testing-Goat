@@ -1,5 +1,18 @@
 
+
 # 9/10/2022
+- Failed to setup Docker with Playwright.
+    - Docker setup does not work.
+    - Issues:
+        - Alpine isn't supported by Playwright.
+            - This includes the Python image, which is Alpine-based.
+    - Alternative Docker images: 
+        - Ubuntu
+            - Building with scratch with Ubuntu is possible, but it takes forever. It would need to download and install a lot of files.
+            - This option is subpar as the waiting time is vast.
+        - Official Playwright image
+            - It is difficult to figure out how to install pytest and other dependencies within this image.
+            - This might be more doable, but extra research time is needed.
 
 - Completed Section 5
 
