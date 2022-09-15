@@ -1,6 +1,9 @@
 # Book:
 >> https://www.obeythetestinggoat.com/book/part1.harry.html
 
+> Pytest code to run:
+pytest -n auto --showlocals --html=report.html --html=report.html --self-contained-html
+
 # Index
 
 - A## - Assertion styles between Python and Playwright
