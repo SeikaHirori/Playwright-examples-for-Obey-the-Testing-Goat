@@ -45,14 +45,13 @@ class Tests_NewVistor(LiveServerTestCase):
 
 
         """
-            Edith heard about a new online to-do app. 
-        She checks out the website.
+            Edith has heard about a cool new online to-do app. She goes to check out its homepage
         """
         #### Selenium style - B02:
-        # self.browser.get('http://localhost:8000')
+        # self.browser.get(self.live_server_url)
         ####
 
-        page.goto("http://localhost:8000/")
+        page.goto(self.live_server_url)
 
 
 
