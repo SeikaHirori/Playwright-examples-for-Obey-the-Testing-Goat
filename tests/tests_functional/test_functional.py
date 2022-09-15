@@ -49,7 +49,7 @@ class Tests_NewVistor(LiveServerTestCase):
         She checks out the website.
         """
         #### Selenium style - B02:
-        # browser.get('http://localhost:8000')
+        # self.browser.get('http://localhost:8000')
         ####
 
         page.goto("http://localhost:8000/")
