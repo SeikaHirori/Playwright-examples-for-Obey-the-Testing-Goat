@@ -9,8 +9,24 @@ import re
 
 import time
 
-from django.test import LiveServerTestCase
-class Tests_NewVistor(LiveServerTestCase):
+
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from playwright.sync_api import sync_playwright
+class Tests_NewVistor(StaticLiveServerTestCase):
+
+
+    @classmethod
+    def setUpClass(cls) -> None: # RFER 14
+        super().setUpClass()
+        cls.playwright = sync_playwright().start()
+        cls.browser = cls.playwright.chromium.launch()
+    
+    @classmethod
+    def tearDownClass(cls) -> None: # RFER 14
+        cls.browser.close()
+        cls.playwright.stop()
+        super().tearDownClass()
+
 
     def check_for_row_in_list_table(self, row_text:str, page:Page): # Page is needed for Playwright; It isn't needed for Selenium SO it's parameter would be "check_for_row_in_list_table(self, row_text:str)"
         #### Selenium style - B07
@@ -36,12 +52,13 @@ class Tests_NewVistor(LiveServerTestCase):
         assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09
 
 
-    def test_can_start_a_list_and_retrieve_it_later(self, page: Page):
+    def test_can_start_a_list_and_retrieve_it_later(self):
 
         #### Selenium style - B01
         # browser = webdriver.Firefox()
         ####
 
+        page = self.browser.new_page()
 
 
         """
