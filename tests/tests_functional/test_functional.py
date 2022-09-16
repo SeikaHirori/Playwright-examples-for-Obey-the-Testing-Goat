@@ -12,8 +12,10 @@ import time
 
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from playwright.sync_api import sync_playwright
-class Tests_NewVistor(StaticLiveServerTestCase):
 
+from asgiref.sync import sync_to_async
+
+class Tests_NewVistor(StaticLiveServerTestCase):
 
     @classmethod
     def setUpClass(cls) -> None: # RFER 14
@@ -26,7 +28,6 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         cls.browser.close()
         cls.playwright.stop()
         super().tearDownClass()
-
 
     def check_for_row_in_list_table(self, row_text:str, page:Page): # Page is needed for Playwright; It isn't needed for Selenium SO it's parameter would be "check_for_row_in_list_table(self, row_text:str)"
         #### Selenium style - B07

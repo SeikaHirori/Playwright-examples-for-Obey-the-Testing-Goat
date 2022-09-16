@@ -1,8 +1,11 @@
 # Book:
 >> https://www.obeythetestinggoat.com/book/part1.harry.html
 
-> Pytest code to run:
+> Pytest code to run with --showlocals:
 pytest -n auto --showlocals --html=report.html --html=report.html --self-contained-html
+
+> Pytest code to run without --showlocals:
+pytest -n auto --html=report.html --html=report.html --self-contained-html
 
 # Index
 
