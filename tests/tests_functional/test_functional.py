@@ -18,8 +18,9 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 with sync_playwright() as p: # RFER 16
     browser = p.chromium.launch()
     page = browser.new_page()
-    
 
+
+MAX_WAIT:int = 10
 
 class Tests_NewVistor(StaticLiveServerTestCase):
 
@@ -35,28 +36,36 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         cls.playwright.stop()
         super().tearDownClass()
 
-    def check_for_row_in_list_table(self, row_text:str, page:Page): # Page is needed for Playwright; It isn't needed for Selenium SO it's parameter would be "check_for_row_in_list_table(self, row_text:str)"
+    def wait_for_row_in_list_table(self, row_text:str, page:Page): # Page is needed for Playwright; It isn't needed for Selenium SO it's parameter would be "wait_for_row_in_list_table(self, row_text:str)"
         #### Selenium style - B07
         # table = self.browser.find_element_by_id('id_list_table')
         # rows = table.find_elements_by_tag_name('tr')  
         # self.assertIn(row_text, [row.text for row in rows])
         ####
-
-        table:Locator = page.locator('id=id_list_table')
+        start_time = time.time()
+        while True: 
+            try:
+                table:Locator = page.locator('id=id_list_table')
+                        
+                # String way
+                rows:str = table.inner_text() # RFER 08 # Stores whole list in a string that also contains "\n"
                 
-        # String way
-        rows:str = table.inner_text() # RFER 08 # Stores whole list in a string that also contains "\n"
-        
-        #### Pythonic Way - A04.1
-        assert row_text in rows
-        #### Playwright Way - A04: This is similar to the Pythonic Way - A04.01
-        expect(table).to_contain_text(row_text)
-        
-        
-        #### Pythonic Way - A04.2: Using rows_list:list[str] is more precise than rows:str
-        # List way
-        rows_list:list[str] = table.inner_text().splitlines()
-        assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09
+                #### Pythonic Way - A04.1
+                assert row_text in rows
+                #### Playwright Way - A04: This is similar to the Pythonic Way - A04.01
+                expect(table).to_contain_text(row_text)
+                
+                
+                #### Pythonic Way - A04.2: Using rows_list:list[str] is more precise than rows:str
+                # List way
+                rows_list:list[str] = table.inner_text().splitlines()
+                assert row_text in rows_list, f"New to-do item did not appear in table. Contents were:\n{table.inner_text()}" # RFER 09
+
+                return
+            except (AssertionError, PlaywrightTimeoutError) as e:
+                if time.time() - start_time > MAX_WAIT:
+                    raise e
+                time.sleep(0.5)
 
 
     def test_can_start_a_list_and_retrieve_it_later(self):
@@ -136,14 +145,14 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         #### Selenium style - B06
         # inputbox.send_keys(Keys.ENTER)
         # time.sleep(1)
-        # self.check_for_row_in_list_table('1: Buy peacock feathers')
+        # self.wait_for_row_in_list_table('1: Buy peacock feathers')
         ####
 
         locator_input_box.press('Enter') # RFER 05 & RFER 06
         time.sleep(1)
 
         desired_row_text_1:str = "1: Buy peacock feathers"
-        self.check_for_row_in_list_table(desired_row_text_1, page)
+        self.wait_for_row_in_list_table(desired_row_text_1, page)
 
 
 
@@ -167,13 +176,13 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         
         """
         #### Selenium style - B0
-        # self.check_for_row_in_list_table('1: Buy peacock feathers')
-        # self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
+        # self.wait_for_row_in_list_table('1: Buy peacock feathers')
+        # self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
         ####
 
-        self.check_for_row_in_list_table(desired_row_text_1, page)
+        self.wait_for_row_in_list_table(desired_row_text_1, page)
         desired_row_text_2:str = '2: Use peacock feathers to make a fly'
-        self.check_for_row_in_list_table(desired_row_text_2, page)
+        self.wait_for_row_in_list_table(desired_row_text_2, page)
 
 
         """

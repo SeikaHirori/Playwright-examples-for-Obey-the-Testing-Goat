@@ -1,5 +1,11 @@
 
 # 9/16/2022
+
+- Currently struggling with troubleshooting:
+    > django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+    - not sure how and where to implement sync_to_async
+    - However, the tests still works as intended. This error might be solvable whenever?
+
 - Started Section 6.2
 >> https://www.obeythetestinggoat.com/book/chapter_explicit_waits_1.html#_aside_upgrading_selenium_and_geckodriver
 
