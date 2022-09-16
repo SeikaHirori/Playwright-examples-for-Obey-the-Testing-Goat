@@ -2,7 +2,10 @@
 # 9/16/2022
 
 - Currently struggling with troubleshooting:
-    > django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
+    > else:
+            > if not os.environ.get("DJANGO_ALLOW_ASYNC_UNSAFE"):
+            > raise SynchronousOnlyOperation(message)
+            >            django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
     - not sure how and where to implement sync_to_async
     - However, the tests still works as intended. This error might be solvable whenever?
     - Occurance of error:
