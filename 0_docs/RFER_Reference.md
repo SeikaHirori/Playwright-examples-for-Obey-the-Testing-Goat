@@ -92,3 +92,6 @@ Playwright and Django's LiveServerTestCase
         - Old:
             >  from playwright import sync_playwright 
         >> https://playwright.dev/python/docs/api/class-playwright
+
+- Official Django doc - StaticLiveServerTestCase
+    >> https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase
