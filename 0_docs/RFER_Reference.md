@@ -81,10 +81,14 @@ Removing whitespace in middle of string
 
 # RFER 14
 Playwright and Django's LiveServerTestCase
-- Refer to info below on proper setup
->> https://devblogs.microsoft.com/python/announcing-playwright-for-python-reliable-end-to-end-testing-for-the-web/
+- Main information on setting up
+    - Refer to info below on proper setup
+    >> https://devblogs.microsoft.com/python/announcing-playwright-for-python-reliable-end-to-end-testing-for-the-web/
 
-- Update info from former to later:
-    > from playwright.sync_api import sync_playwright
-    > from playwright import sync_playwright 
-    >> https://playwright.dev/python/docs/api/class-playwright
+- Additional info:
+    - Update info about sync_playwright from former to later:
+        - Current/new:
+            > from playwright.sync_api import sync_playwright
+        - Old:
+            >  from playwright import sync_playwright 
+        >> https://playwright.dev/python/docs/api/class-playwright
