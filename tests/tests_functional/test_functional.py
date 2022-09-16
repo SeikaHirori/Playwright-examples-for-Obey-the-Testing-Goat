@@ -13,7 +13,13 @@ import time
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from playwright.sync_api import sync_playwright
 
-from asgiref.sync import sync_to_async
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+
+with sync_playwright() as p: # RFER 16
+    browser = p.chromium.launch()
+    page = browser.new_page()
+    
+
 
 class Tests_NewVistor(StaticLiveServerTestCase):
 
@@ -21,7 +27,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
     def setUpClass(cls) -> None: # RFER 14
         super().setUpClass()
         cls.playwright = sync_playwright().start()
-        cls.browser = cls.playwright.chromium.launch()
+        cls.browser = cls.playwright.firefox.launch()
     
     @classmethod
     def tearDownClass(cls) -> None: # RFER 14

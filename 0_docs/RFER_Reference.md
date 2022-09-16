@@ -100,3 +100,9 @@ Playwright and Django's LiveServerTestCase
 - Info on error:
 > django.core.exceptions.SynchronousOnlyOperation: You cannot call this from an async context - use a thread or sync_to_async.
     >> https://docs.djangoproject.com/en/4.1/topics/async/#sync-to-async
+
+# RFER 16
+- Playwright's TimeoutError
+    - Similar to Selenium's WebDriverException
+        > from selenium.common.exceptions import WebDriverException
+>> https://playwright.dev/python/docs/api/class-timeouterror
