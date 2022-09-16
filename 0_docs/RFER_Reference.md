@@ -106,3 +106,7 @@ Playwright and Django's LiveServerTestCase
     - Similar to Selenium's WebDriverException
         > from selenium.common.exceptions import WebDriverException
 >> https://playwright.dev/python/docs/api/class-timeouterror
+
+# RFER 17
+- Example: Setting up Playwright setup and teardown 
+>> https://github.com/mxschmitt/python-django-playwright/blob/master/test_login.py

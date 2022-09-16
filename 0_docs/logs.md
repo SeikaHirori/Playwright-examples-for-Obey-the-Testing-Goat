@@ -1,6 +1,11 @@
 
 # 9/16/2022
 
+- ENDING SESH
+    - Next time:
+        - LOOK AT THIS EXAMPLE TO RESOLVE sync_to_async ISSUE:
+            >> https://github.com/mxschmitt/python-django-playwright/blob/master/test_login.py
+
 - Currently struggling with troubleshooting:
     > else:
             > if not os.environ.get("DJANGO_ALLOW_ASYNC_UNSAFE"):

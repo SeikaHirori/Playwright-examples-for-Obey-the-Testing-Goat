@@ -213,5 +213,5 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         ####
 
 
-
+        page.close()
         assert "Not complete" == ":'[", f"finish the test!"
