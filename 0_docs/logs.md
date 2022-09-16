@@ -1,4 +1,7 @@
 
+# 9/16/2022
+- Started Section 6.2
+>> https://www.obeythetestinggoat.com/book/chapter_explicit_waits_1.html#_aside_upgrading_selenium_and_geckodriver
 
 # 9/15/2022
 
