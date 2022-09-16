@@ -9,15 +9,13 @@ import re
 
 import time
 
-
+import os
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from playwright.sync_api import sync_playwright
 
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
-with sync_playwright() as p: # RFER 16
-    browser = p.chromium.launch()
-    page = browser.new_page()
+
 
 
 MAX_WAIT:int = 10
@@ -26,6 +24,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
     @classmethod
     def setUpClass(cls) -> None: # RFER 14
+        os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true" # RFER 17 - LOOK AT THIS
         super().setUpClass()
         cls.playwright = sync_playwright().start()
         cls.browser = cls.playwright.firefox.launch()
