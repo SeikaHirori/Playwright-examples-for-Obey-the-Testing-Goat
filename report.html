@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 15-Sep-2022 at 22:35:38 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 16-Sep-2022 at 19:34:36 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -448,7 +448,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.10.5</td></tr></table>
     <h2>Summary</h2>
-    <p>7 tests ran in 2.41 seconds. </p>
+    <p>7 tests ran in 2.22 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -464,29 +464,20 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/tests_functional/test_functional.py::Tests_NewVistor::test_can_start_a_list_and_retrieve_it_later</td>
-          <td class="col-duration">0.60</td>
+          <td class="col-duration">0.62</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/><br/>self = &lt;unittest.case._Outcome object at 0x103720cd0&gt;<br/>test_case = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/>isTest = True<br/><br/>    @contextlib.contextmanager<br/>    def testPartExecutor(self, test_case, isTest=False):<br/>        old_success = self.success<br/>        self.success = True<br/>        try:<br/>&gt;           yield<br/><br/>exc_info   = None<br/>isTest     = True<br/>old_success = True<br/>self       = &lt;unittest.case._Outcome object at 0x103720cd0&gt;<br/>test_case  = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/><br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py:59: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py:591: in run<br/>    self._callTestMethod(testMethod)<br/>        expecting_failure = False<br/>        outcome    = &lt;unittest.case._Outcome object at 0x103720cd0&gt;<br/>        result     = &lt;TestCaseFunction test_can_start_a_list_and_retrieve_it_later&gt;<br/>        self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/>        stopTestRun = None<br/>        testMethod = &lt;bound method Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later of &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;&gt;<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/>method = &lt;bound method Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later of &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;&gt;<br/><br/>    def _callTestMethod(self, method):<br/>&gt;       method()<br/><span class="error">E       TypeError: Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later() missing 1 required positional argument: &#x27;page&#x27;</span><br/><br/>method     = &lt;bound method Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later of &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;&gt;<br/>self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/><br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py:549: TypeError[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
+            <div class="log">[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/><br/>self = &lt;unittest.case._Outcome object at 0x105129c30&gt;<br/>test_case = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/>isTest = True<br/><br/>    @contextlib.contextmanager<br/>    def testPartExecutor(self, test_case, isTest=False):<br/>        old_success = self.success<br/>        self.success = True<br/>        try:<br/>&gt;           yield<br/><br/>exc_info   = None<br/>isTest     = True<br/>old_success = True<br/>self       = &lt;unittest.case._Outcome object at 0x105129c30&gt;<br/>test_case  = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/><br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py:59: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py:591: in run<br/>    self._callTestMethod(testMethod)<br/>        expecting_failure = False<br/>        outcome    = &lt;unittest.case._Outcome object at 0x105129c30&gt;<br/>        result     = &lt;TestCaseFunction test_can_start_a_list_and_retrieve_it_later&gt;<br/>        self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/>        stopTestRun = None<br/>        testMethod = &lt;bound method Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later of &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;&gt;<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/>method = &lt;bound method Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later of &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;&gt;<br/><br/>    def _callTestMethod(self, method):<br/>&gt;       method()<br/><span class="error">E       TypeError: Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later() missing 1 required positional argument: &#x27;page&#x27;</span><br/><br/>method     = &lt;bound method Tests_NewVistor.test_can_start_a_list_and_retrieve_it_later of &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;&gt;<br/>self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_and_retrieve_it_later&gt;<br/><br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py:549: TypeError[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_uses_home_template</td>
-          <td class="col-duration">0.24</td>
+          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_can_save_a_POST_request</td>
+          <td class="col-duration">0.23</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_ItemModel::test_saving_and_retrieving_items</td>
-          <td class="col-duration">0.21</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
+            <div class="log">[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -499,17 +490,26 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_can_save_a_POST_request</td>
+          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_uses_home_template</td>
           <td class="col-duration">0.25</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
+            <div class="log">[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_ItemModel::test_saving_and_retrieving_items</td>
+          <td class="col-duration">0.23</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_redirects_after_POST</td>
-          <td class="col-duration">0.26</td>
+          <td class="col-duration">0.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -518,7 +518,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_only_saves_items_when_necessary</td>
-          <td class="col-duration">0.30</td>
+          <td class="col-duration">0.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
