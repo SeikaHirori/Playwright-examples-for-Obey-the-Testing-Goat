@@ -113,5 +113,7 @@ Playwright and Django's LiveServerTestCase
 
 # RFER 18
 How to setup timeout for Playwright
+
+
 >> https://github.com/microsoft/playwright-python/issues/1323
->>https://playwright.dev/python/docs/api/class-page#page-set-default-timeout
+>> https://playwright.dev/python/docs/api/class-page#page-set-default-timeout
