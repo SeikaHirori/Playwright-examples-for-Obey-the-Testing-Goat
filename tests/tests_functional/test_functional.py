@@ -155,7 +155,6 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         ####
 
         locator_input_box.press('Enter') # RFER 05 & RFER 06
-        time.sleep(1)
 
         desired_row_text_1:str = "1: Buy peacock feathers"
         self.wait_for_row_in_list_table(desired_row_text_1, page)
@@ -175,7 +174,6 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         locator_input_box:Locator = page.locator('id=id_new_item') # RFER 02
         locator_input_box.type('Use peacock feathers to make a fly')
         locator_input_box.press('Enter')
-        time.sleep(1)
 
         """
             The page updates again, and now shows both items on her list.
