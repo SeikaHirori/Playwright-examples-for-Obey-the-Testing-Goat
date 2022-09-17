@@ -69,7 +69,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
                 return
             except (AssertionError, PlaywrightTimeoutError) as e:
-                if (time.time() - start_time) > MAX_WAIT:
+                if (time.time() - start_time) > MAX_WAIT: # This might be needed?
                     raise e
                 time.sleep(0.5)
 
