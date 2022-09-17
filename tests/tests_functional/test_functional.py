@@ -236,7 +236,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         ###
         edith_list_url = page.url # RFER 19
         regex_results_rematch = re.match(edith_list_url, r"/lists/.+") # RFER 20 && RFER 21
-        # assert regex_results_rematch
+        assert regex_results_rematch
         
 
         """
