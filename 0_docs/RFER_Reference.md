@@ -133,8 +133,11 @@ How to setup timeout for Playwright
 
 # RFER 22
 - Playwright: start new context (aka new session?)
->> https://playwright.dev/python/docs/api/class-browsercontext
+>> ~~ https://playwright.dev/python/docs/api/class-browsercontext ~~
+>> https://playwright.dev/python/docs/api/class-browser#browser-new-browser-cdp-session
 
 - Equal to this?:
 > self.browser.quit()
 > self.browser = webdriver.Firefox()
+
+- Second link starts a browser session

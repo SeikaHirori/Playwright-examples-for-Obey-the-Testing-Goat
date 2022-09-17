@@ -24,7 +24,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true" # RFER 17 - LOOK AT THIS
         super().setUpClass()
         cls.playwright = sync_playwright().start()
-        cls.browser = cls.playwright.firefox.launch()
+        cls.browser = cls.playwright.chromium.launch()
     
     @classmethod
     def tearDownClass(cls) -> None: # RFER 14
@@ -219,7 +219,8 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         # inputbox.send_keys(Keys.ENTER)
         # self.wait_for_row_in_list_table('1: Buy peacock feathers')
         ###
-        page:Page = self.browser.new_page()
+        context = self.browser.new_context() # RFER 22
+        page:Page = context.new_page()
         page.goto(self.live_server_url)
         locator_input_box:Locator = page.locator("id=id_new_item")
         locator_input_box.type("Buy peacock feathers")
@@ -235,7 +236,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         ###
         edith_list_url = page.url # RFER 19
         regex_results_rematch = re.match(edith_list_url, r"/lists/.+") # RFER 20 && RFER 21
-        assert regex_results_rematch
+        # assert regex_results_rematch
         
 
         """
@@ -245,6 +246,15 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         """
         ## We use a new browser session to make sure that no information of Edith's is coming through from cookies etc
         """
-        page.close()
-        page = self.browser.new_context()
+        context.close() # RFER 22
+        self.browser.new_browser_cdp_session() # RFER 22
+        context = self.browser.new_context()
 
+        """
+        # Francis visits the home page. There is no sign of Edith's list.
+        """
+        page:Page = context.new_page()
+        page.goto(self.live_server_url)
+        page_text = page.locator('body').inner_text()
+        assert 'Buy peacock feathers' not in page_text
+        assert 'make a fly' not in page_text
