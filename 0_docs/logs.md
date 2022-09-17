@@ -5,6 +5,8 @@ Added "addopts" to pytest.ini
 >> https://docs.pytest.org/en/6.2.x/customize.html
 # 9/16/2022
 
+
+
 - ENDING SESH
     - Next time:
         - LOOK AT THIS EXAMPLE TO RESOLVE sync_to_async ISSUE:

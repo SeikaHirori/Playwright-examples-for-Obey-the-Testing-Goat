@@ -19,7 +19,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
 
 
-MAX_WAIT:int = 10
+MAX_WAIT_milliseconds:int = 10000 
 
 class Tests_NewVistor(StaticLiveServerTestCase):
 
@@ -45,7 +45,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         start_time = time.time()
         while True: 
             try:
-                page.set_default_timeout(MAX_WAIT) # RFER 18
+                page.set_default_timeout(MAX_WAIT_milliseconds) # RFER 18
 
                 table:Locator = page.locator('id=id_list_table')
 
@@ -65,7 +65,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
                 return
             except (AssertionError, PlaywrightTimeoutError) as e:
-                if (time.time() - start_time) > MAX_WAIT: # This might be needed?
+                if (time.time() - start_time) > MAX_WAIT_milliseconds: # This might be needed?
                     raise e
                 time.sleep(0.5)
 
