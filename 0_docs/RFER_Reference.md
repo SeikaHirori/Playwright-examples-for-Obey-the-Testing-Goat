@@ -130,3 +130,11 @@ How to setup timeout for Playwright
 - Equalivant to:
     > self.assertRegex(edith_list_url, '/lists/.+')  
 >> https://stackoverflow.com/a/57420422
+
+# RFER 22
+- Playwright: start new context (aka new session?)
+>> https://playwright.dev/python/docs/api/class-browsercontext
+
+- Equal to this?:
+> self.browser.quit()
+> self.browser = webdriver.Firefox()

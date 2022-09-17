@@ -245,3 +245,6 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         """
         ## We use a new browser session to make sure that no information of Edith's is coming through from cookies etc
         """
+        page.close()
+        page = self.browser.new_context()
+
