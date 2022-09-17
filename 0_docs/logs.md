@@ -1,7 +1,10 @@
 
 # 9/17/2022
 
-Added "addopts" to pytest.ini
+- Started Section 7.2
+>> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_implementing_the_new_design_incrementally_using_tdd
+
+- Added "addopts" to pytest.ini
 >> https://docs.pytest.org/en/6.2.x/customize.html
 # 9/16/2022
 

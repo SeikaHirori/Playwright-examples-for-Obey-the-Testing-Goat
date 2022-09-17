@@ -117,3 +117,7 @@ How to setup timeout for Playwright
 
 >> https://github.com/microsoft/playwright-python/issues/1323
 >> https://playwright.dev/python/docs/api/class-page#page-set-default-timeout
+
+# RFER 19
+- Playwright: grabbing current URL 
+>>https://playwright.dev/python/docs/api/class-page#page-url
