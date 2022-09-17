@@ -110,3 +110,7 @@ Playwright and Django's LiveServerTestCase
 # RFER 17
 - Example: Setting up Playwright setup and teardown 
 >> https://github.com/mxschmitt/python-django-playwright/blob/master/test_login.py
+
+# RFER 18
+How to setup timeout for Playwright
+>> https://github.com/microsoft/playwright-python/issues/1323
