@@ -121,3 +121,12 @@ How to setup timeout for Playwright
 # RFER 19
 - Playwright: grabbing current URL 
 >>https://playwright.dev/python/docs/api/class-page#page-url
+
+# RFER 20
+- How re.match works:
+>> https://docs.python.org/3/library/re.html#re.match
+
+# RFER 21
+- Equalivant to:
+    > self.assertRegex(edith_list_url, '/lists/.+')  
+>> https://stackoverflow.com/a/57420422

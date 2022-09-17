@@ -1,5 +1,4 @@
 import pytest
-
 #### Selenium style - B00: Import libary
 # from selenium import webdriver 
 ####
@@ -14,9 +13,6 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from playwright.sync_api import sync_playwright
 
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
-
-
-
 
 
 MAX_WAIT_milliseconds:int = 10000 
@@ -80,7 +76,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-            Edith has heard about a cool new online to-do app. She goes to check out its homepage
+        # Edith has heard about a cool new online to-do app. She goes to check out its homepage
         """
         #### Selenium style - B02:
         # self.browser.get(self.live_server_url)
@@ -91,7 +87,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-            She noticed that the page title and header states "To-Do" lists.
+        # She noticed that the page title and header states "To-Do" lists.
         """
         #### Selenium style - B03
         # self.assertIn('To-Do', self.browser.title)
@@ -105,7 +101,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-            She is invited to enter a to-do item straight away.
+        # She is invited to enter a to-do item straight away.
         """
         #### Selenium style - B04
         # inputbox = self.browser.find_element_by_id('id_new_item')  
@@ -128,8 +124,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """    
-            She types "Buy peacock feathers" into a text box (Edith's hobby
-        is tying fly-fishing lures).
+        # She types "Buy peacock feathers" into a text box (Edith's hobby is tying fly-fishing lures).
         """
         #### Selenium style - B05
         # inputbox.send_keys('Buy peacock feathers')  
@@ -140,8 +135,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-            When she hits enter, the page updates, and now the page lists
-        "1: Buy peacock feathers" as an item in a to-do list.
+        # When she hits enter, the page updates, and now the page lists "1: Buy peacock feathers" as an item in a to-do list.
 
         """
         #### Selenium style - B06
@@ -158,8 +152,8 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-            There is still a text box invitingher to add another item. She
-        enters "Use peacock feathers to make a fly" (Edith is very methodical).
+            # There is still a text box invitingher to add another item.
+            # She enters "Use peacock feathers to make a fly" (Edith is very methodical).
         """
         #### Selenium style - B08
         # inputbox = self.browser.find_element_by_id('id_new_item')
@@ -172,7 +166,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         locator_input_box.press('Enter')
 
         """
-            The page updates again, and now shows both items on her list.
+        # The page updates again, and now shows both items on her list.
         
         """
         #### Selenium style - B09
@@ -186,9 +180,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-            Edith wonders whether the site will remember her list. Then she
-        sees the site has generate a unique URL for her -- there is some 
-        explantory text to that effect.
+        # Edith wonders whether the site will remember her list. Then she sees the site has generate a unique URL for her -- there is some explantory text to that effect.
         """
         #### Selenium style - B
         
@@ -197,7 +189,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-            She vists that URL - her to-do list is still there.
+        # She vists that URL - her to-do list is still there.
         """
         #### Selenium style - B
         
@@ -206,7 +198,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
 
         """
-        Satisfied, she goes back to sleep
+        # Satisfied, she goes back to sleep
         """
         #### Selenium style - B
         
@@ -218,7 +210,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
     def test_multiple_users_can_start_lists_at_different_urls(self):
         """
-        Edith starts a new to-do list
+        # Edith starts a new to-do list
         """
         ### Selenium style - B10
         # self.browser.get(self.live_server_url)
@@ -231,17 +223,25 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         page.goto(self.live_server_url)
         locator_input_box:Locator = page.locator("id=id_new_item")
         locator_input_box.type("Buy peacock feathers")
-        locator_input_box.press("")
-        self.wait_for_row_in_list_table("1: Buy peacock feathers")
+        locator_input_box.press("Enter")
+        self.wait_for_row_in_list_table("1: Buy peacock feathers", page)
 
         """
-        She notices that her list has a unique URL
+        # She notices that her list has a unique URL
         """
         ### Selenium Style - B11
         # edith_list_url = self.browser.current_url
         # self.assertRegex(edith_list_url, '/lists/.+')
         ###
         edith_list_url = page.url # RFER 19
-
-
+        regex_results_rematch = re.match(edith_list_url, r"/lists/.+") # RFER 20 && RFER 21
+        assert regex_results_rematch
         
+
+        """
+        # Now a new user, Francis, comes along to the site.
+        """
+
+        """
+        ## We use a new browser session to make sure that no information of Edith's is coming through from cookies etc
+        """
