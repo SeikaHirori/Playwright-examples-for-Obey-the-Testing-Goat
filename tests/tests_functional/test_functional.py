@@ -47,12 +47,8 @@ class Tests_NewVistor(StaticLiveServerTestCase):
             try:
                 page.set_default_timeout(MAX_WAIT) # RFER 18
 
-                # table:Locator = page.locator('id=id_list_table')
-                table:Locator = page.locator('id=dsfafsafawefawe')
+                table:Locator = page.locator('id=id_list_table')
 
-
-
-                
                 # String way
                 rows:str = table.inner_text() # RFER 08 # Stores whole list in a string that also contains "\n"
                 
