@@ -67,18 +67,6 @@ class Tests_HomePage:
         response: HttpResponse = Client().get('/')
         assert Item.objects.count() == 0
 
-    def test_displays_all_list_items(self):
-        itemey_1 = 'itemey 1'
-        itemey_2 = 'itemey 2'
-
-        Item.objects.create(text=itemey_1)
-        Item.objects.create(text=itemey_2)
-
-        response: HttpResponse = Client().get('/')
-
-        assert itemey_1 in response.content.decode()
-        assert itemey_2 in response.content.decode()
-
 @pytest.mark.django_db
 class Test_LiveView:
 
