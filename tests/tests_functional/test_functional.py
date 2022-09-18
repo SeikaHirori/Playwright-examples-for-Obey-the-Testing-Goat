@@ -17,6 +17,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
 MAX_WAIT_milliseconds:int = 10000 
 
+@pytest.mark.timeout(60)
 class Tests_NewVistor(StaticLiveServerTestCase):
 
     @classmethod
