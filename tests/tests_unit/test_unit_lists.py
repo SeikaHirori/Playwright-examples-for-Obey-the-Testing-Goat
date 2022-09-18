@@ -37,7 +37,7 @@ class Tests_ItemModel:
         assert second_saved_item.text == 'Item the second'
 
 
-@pytest.mark.django_db
+@pytest.mark.django_db # RFER 10
 class Tests_HomePage:
 
     def test_uses_home_template(self):  # Uses Django.test's Client()
