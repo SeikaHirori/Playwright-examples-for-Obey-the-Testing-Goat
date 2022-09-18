@@ -1,6 +1,6 @@
 import pytest
 from pytest_django.asserts import assertTemplateUsed
-from pytest_django import asserts
+from pytest_django import asserts as pdj_asserts
 
 from django.urls import resolve
 from django.http import HttpRequest, HttpResponse
@@ -47,7 +47,7 @@ class Tests_HomePage:
         assertTemplateUsed(response, 'lists/home.html')
 
         ### Example of how to call pytest_django's asserts; This easily provides a list of available option
-        asserts.assertTemplateUsed(response, 'lists/home.html')
+        pdj_asserts.assertTemplateUsed(response, 'lists/home.html')
 
     def test_can_save_a_POST_request(self):
         desired_text = 'A new list item'
@@ -78,3 +78,19 @@ class Tests_HomePage:
 
         assert itemey_1 in response.content.decode()
         assert itemey_2 in response.content.decode()
+
+@pytest.mark.django_db
+class Test_LiveView:
+
+    def test_displays_all_list_items(self):
+        itemey_1 = 'itemey 1'
+        itemey_2 = 'itemey 2'
+
+        Item.objects.create(text=itemey_1)
+        Item.objects.create(text=itemey_2)
+
+        response: HttpResponse = Client().get('/lists/the-only-list-in-the-world/')
+
+        pdj_asserts.assertContains(response, itemey_1)
+        pdj_asserts.assertContains(response, itemey_2)
+    

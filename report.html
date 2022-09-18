@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 18-Sep-2022 at 22:39:37 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 18-Sep-2022 at 22:44:29 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -443,13 +443,13 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>macOS-12.6-arm64-arm-64bit</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"asyncio": "0.19.0", "base-url": "2.0.0", "custom-exit-code": "0.3.0", "django": "4.5.2", "forked": "1.4.0", "html": "3.1.1", "metadata": "2.0.2", "playwright": "0.3.0", "timeout": "2.1.0", "xdist": "2.5.0"}</td></tr>
+        <td>{"asyncio": "0.19.0", "base-url": "2.0.0", "custom-exit-code": "0.3.0", "django": "4.5.2", "forked": "1.4.0", "html": "3.1.1", "metadata": "2.0.2", "playwright": "0.3.0", "xdist": "2.5.0"}</td></tr>
       <tr>
         <td>Python</td>
         <td>3.10.5</td></tr></table>
     <h2>Summary</h2>
-    <p>8 tests ran in 106.94 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>0 tests ran in 0.06 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -459,196 +459,4 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable" col="duration">Duration</th>
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
-          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/tests_functional/test_functional.py::Tests_NewVistor::test_can_start_a_list_for_one_user</td>
-          <td class="col-duration">60.05</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/><br/>self = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_for_one_user&gt;<br/><br/>    def test_can_start_a_list_for_one_user(self):<br/>    <br/>        #### Selenium style - B01<br/>        # browser = webdriver.Firefox()<br/>        ####<br/>    <br/>        page = self.browser.new_page()<br/>    <br/>    <br/>        &quot;&quot;&quot;<br/>        # Edith has heard about a cool new online to-do app. She goes to check out its homepage<br/>        &quot;&quot;&quot;<br/>        #### Selenium style - B02:<br/>        # self.browser.get(self.live_server_url)<br/>        ####<br/>    <br/>        page.goto(self.live_server_url)<br/>    <br/>    <br/>    <br/>        &quot;&quot;&quot;<br/>        # She noticed that the page title and header states &quot;To-Do&quot; lists.<br/>        &quot;&quot;&quot;<br/>        #### Selenium style - B03<br/>        # self.assertIn(&#x27;To-Do&#x27;, self.browser.title)<br/>        # header_text = self.browser.find_element_by_tag_name(&#x27;h1&#x27;).text<br/>        # self.assertIn(&#x27;To-Do&#x27;, header_text)<br/>        ####<br/>    <br/>        expect(page).to_have_title(re.compile(&quot;To-Do lists&quot;))<br/>        header_text:Locator = page.locator(&#x27;role=heading[level=1]&#x27;) # RFER 3<br/>        expect(header_text).to_have_text(re.compile(r&quot;To-Do list&quot;)) # RFER 04<br/>    <br/>    <br/>        &quot;&quot;&quot;<br/>        # She is invited to enter a to-do item straight away.<br/>        &quot;&quot;&quot;<br/>        #### Selenium style - B04<br/>        # inputbox = self.browser.find_element_by_id(&#x27;id_new_item&#x27;)<br/>        # self.assertEqual(<br/>        #     inputbox.get_attribute(&#x27;placeholder&#x27;),<br/>        #     &#x27;Enter a to-do item&#x27;<br/>        # )<br/>        ####<br/>    <br/>        desired_output_to_do_item:str = &#x27;Enter a to-do item&#x27;<br/>    <br/>        # RFER 01<br/>        locator_input_box:Locator = page.locator(&#x27;id=id_new_item&#x27;) # RFER 02<br/>    <br/>        #### Pythonic way - A01<br/>        assert locator_input_box.get_attribute(&#x27;placeholder&#x27;) == desired_output_to_do_item, &#x27;Placeholder should contain &quot;Enter a to-do item&quot;&#x27;<br/>        #### Playwright way - A01<br/>        expect(locator_input_box).to_have_attribute(name=&#x27;placeholder&#x27;, value=desired_output_to_do_item), &#x27;Placeholder should contain &quot;Enter a to-do item&quot;&#x27;<br/>    <br/>    <br/>    <br/>        &quot;&quot;&quot;<br/>        # She types &quot;Buy peacock feathers&quot; into a text box (Edith&#x27;s hobby is tying fly-fishing lures).<br/>        &quot;&quot;&quot;<br/>        #### Selenium style - B05<br/>        # inputbox.send_keys(&#x27;Buy peacock feathers&#x27;)<br/>        ####<br/>    <br/>        locator_input_box.type(&#x27;Buy peacock feathers&#x27;) # RFER 05<br/>    <br/>    <br/>    <br/>        &quot;&quot;&quot;<br/>        # When she hits enter, the page updates, and now the page lists &quot;1: Buy peacock feathers&quot; as an item in a to-do list.<br/>    <br/>        &quot;&quot;&quot;<br/>        #### Selenium style - B06<br/>        # inputbox.send_keys(Keys.ENTER)<br/>        # time.sleep(1)<br/>        # self.wait_for_row_in_list_table(&#x27;1: Buy peacock feathers&#x27;)<br/>        ####<br/>    <br/>        locator_input_box.press(&#x27;Enter&#x27;) # RFER 05 &amp; RFER 06<br/>    <br/>        desired_row_text_1:str = &quot;1: Buy peacock feathers&quot;<br/>&gt;       self.wait_for_row_in_list_table(desired_row_text_1, page)<br/><br/>desired_output_to_do_item = &#x27;Enter a to-do item&#x27;<br/>desired_row_text_1 = &#x27;1: Buy peacock feathers&#x27;<br/>header_text = &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:55115/lists/the-only-list-in-the-world/&#x27;&gt; selector=&#x27;role=heading[level=1]&#x27;&gt;<br/>locator_input_box = &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:55115/lists/the-only-list-in-the-world/&#x27;&gt; selector=&#x27;id=id_new_item&#x27;&gt;<br/>page       = &lt;Page url=&#x27;http://localhost:55115/lists/the-only-list-in-the-world/&#x27;&gt;<br/>self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_for_one_user&gt;<br/><br/>tests/tests_functional/test_functional.py:150: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>tests/tests_functional/test_functional.py:49: in wait_for_row_in_list_table<br/>    rows:str = table.inner_text() # RFER 08 # Stores whole list in a string that also contains &quot;\n&quot;<br/>        page       = &lt;Page url=&#x27;http://localhost:55115/lists/the-only-list-in-the-world/&#x27;&gt;<br/>        row_text   = &#x27;1: Buy peacock feathers&#x27;<br/>        self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_can_start_a_list_for_one_user&gt;<br/>        start_time = 1663540674.4839091<br/>        table      = &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:55115/lists/the-only-list-in-the-world/&#x27;&gt; selector=&#x27;id=id_list_table&#x27;&gt;<br/>goat_venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py:13160: in inner_text<br/>    self._sync(self._impl_obj.inner_text(timeout=timeout))<br/>        self       = &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:55115/lists/the-only-list-in-the-world/&#x27;&gt; selector=&#x27;id=id_list_table&#x27;&gt;<br/>        timeout    = None<br/>goat_venv/lib/python3.10/site-packages/playwright/sync_api/_context_manager.py:67: in greenlet_main<br/>    self._loop.run_until_complete(self._connection.run_as_sync())<br/>        self       = &lt;playwright.sync_api._context_manager.PlaywrightContextManager object at 0x104fadc30&gt;<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py:633: in run_until_complete<br/>    self.run_forever()<br/>        future     = &lt;Task pending name=&#x27;Task-1&#x27; coro=&lt;Connection.run_as_sync() running at /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/playwright/_impl/_connection.py:215&gt; wait_for=&lt;Future pending cb=[Task.task_wakeup()]&gt;&gt;<br/>        new_task   = True<br/>        self       = &lt;_UnixSelectorEventLoop running=False closed=False debug=False&gt;<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py:600: in run_forever<br/>    self._run_once()<br/>        old_agen_hooks = asyncgen_hooks(firstiter=None, finalizer=None)<br/>        self       = &lt;_UnixSelectorEventLoop running=False closed=False debug=False&gt;<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py:1860: in _run_once<br/>    event_list = self._selector.select(timeout)<br/>        sched_count = 0<br/>        self       = &lt;_UnixSelectorEventLoop running=False closed=False debug=False&gt;<br/>        timeout    = None<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selectors.KqueueSelector object at 0x104fae3b0&gt;<br/>timeout = None<br/><br/>    def select(self, timeout=None):<br/>        timeout = None if timeout is None else max(timeout, 0)<br/>        # If max_ev is 0, kqueue will ignore the timeout. For consistent<br/>        # behavior with the other selector classes, we prevent that here<br/>        # (using max). See https://bugs.python.org/issue29255<br/>        max_ev = max(len(self._fd_to_key), 1)<br/>        ready = []<br/>        try:<br/>&gt;           kev_list = self._selector.control(None, max_ev, timeout)<br/><span class="error">E           Failed: Timeout &gt;60.0s</span><br/><br/>max_ev     = 3<br/>ready      = []<br/>self       = &lt;selectors.KqueueSelector object at 0x104fae3b0&gt;<br/>timeout    = None<br/><br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/selectors.py:562: Failed<br/> ------------------------------Captured stderr call------------------------------ <br/>
-+++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
-
-~~~~~~~~~~~ Stack of Thread-2 (process_request_thread) (6238105600) ~~~~~~~~~~~~
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 973, in _bootstrap
-    self._bootstrap_inner()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 1016, in _bootstrap_inner
-    self.run()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 953, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/core/servers/basehttp.py&quot;, line 102, in process_request_thread
-    super().process_request_thread(request, client_address)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 683, in process_request_thread
-    self.finish_request(request, client_address)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 360, in finish_request
-    self.RequestHandlerClass(request, client_address, self)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 747, in __init__
-    self.handle()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/core/servers/basehttp.py&quot;, line 204, in handle
-    self.handle_one_request()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/core/servers/basehttp.py&quot;, line 212, in handle_one_request
-    self.raw_requestline = self.rfile.readline(65537)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py&quot;, line 705, in readinto
-    return self._sock.recv_into(b)
-
-~~~~~~~~~~~~~~~~~~~~~~~ Stack of waitpid-0 (6221279232) ~~~~~~~~~~~~~~~~~~~~~~~~
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 973, in _bootstrap
-    self._bootstrap_inner()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 1016, in _bootstrap_inner
-    self.run()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 953, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/unix_events.py&quot;, line 1392, in _do_waitpid
-    pid, status = os.waitpid(expected_pid, 0)
-
-~~~~~~~~~~~~~~~~~~~~~~~~ Stack of Thread-1 (6204452864) ~~~~~~~~~~~~~~~~~~~~~~~~
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 973, in _bootstrap
-    self._bootstrap_inner()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 1016, in _bootstrap_inner
-    self.run()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/test/testcases.py&quot;, line 1754, in run
-    self.httpd.serve_forever()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 232, in serve_forever
-    ready = selector.select(poll_interval)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/selectors.py&quot;, line 416, in select
-    fd_event_list = self._selector.poll(timeout)
-
-~~~~~~~~~~~~~~~~~~~~~~~ Stack of &lt;unknown&gt; (6187626496) ~~~~~~~~~~~~~~~~~~~~~~~~
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 285, in _perform_spawn
-    reply.run()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 220, in run
-    self._result = func(*args, **kwargs)
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 967, in _thread_receiver
-    msg = Message.from_io(io)
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 432, in from_io
-    header = io.read(9)  # type 1, channel 4, payload 4
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 400, in read
-    data = self._read(numbytes - len(buf))
-
-+++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
-<br/> -------------------------------Captured log call-------------------------------- <br/>WARNING  django.request:log.py:241 Not Found: /lists/the-only-list-in-the-world/<br/></div></td></tr></tbody>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/tests_functional/test_functional.py::Tests_NewVistor::test_multiple_users_can_start_lists_at_different_urls</td>
-          <td class="col-duration">60.04</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw7] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw7] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw7] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/><br/>self = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_multiple_users_can_start_lists_at_different_urls&gt;<br/><br/>    def test_multiple_users_can_start_lists_at_different_urls(self):<br/>        &quot;&quot;&quot;<br/>        # Edith starts a new to-do list<br/>        &quot;&quot;&quot;<br/>        ### Selenium style - B10<br/>        # self.browser.get(self.live_server_url)<br/>        # inputbox = self.browser.find_element_by_id(&#x27;id_new_item&#x27;)<br/>        # inputbox.send_keys(&#x27;Buy peacock feathers&#x27;)<br/>        # inputbox.send_keys(Keys.ENTER)<br/>        # self.wait_for_row_in_list_table(&#x27;1: Buy peacock feathers&#x27;)<br/>        ###<br/>        context = self.browser.new_context() # RFER 22<br/>        page:Page = context.new_page()<br/>        page.goto(self.live_server_url)<br/>        locator_input_box:Locator = page.locator(&quot;id=id_new_item&quot;)<br/>        locator_input_box.type(&quot;Buy peacock feathers&quot;)<br/>        locator_input_box.press(&quot;Enter&quot;)<br/>&gt;       self.wait_for_row_in_list_table(&quot;1: Buy peacock feathers&quot;, page)<br/><br/>context    = &lt;BrowserContext browser=&lt;Browser type=&lt;BrowserType name=chromium executable_path=/Users/watoart/Library/Caches/ms-playwright/chromium-1019/chrome-mac/Chromium.app/Contents/MacOS/Chromium&gt; version=105.0.5195.19&gt;&gt;<br/>locator_input_box = &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:55116/lists/the-only-list-in-the-world/&#x27;&gt; selector=&#x27;id=id_new_item&#x27;&gt;<br/>page       = &lt;Page url=&#x27;http://localhost:55116/lists/the-only-list-in-the-world/&#x27;&gt;<br/>self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_multiple_users_can_start_lists_at_different_urls&gt;<br/><br/>tests/tests_functional/test_functional.py:228: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>tests/tests_functional/test_functional.py:49: in wait_for_row_in_list_table<br/>    rows:str = table.inner_text() # RFER 08 # Stores whole list in a string that also contains &quot;\n&quot;<br/>        page       = &lt;Page url=&#x27;http://localhost:55116/lists/the-only-list-in-the-world/&#x27;&gt;<br/>        row_text   = &#x27;1: Buy peacock feathers&#x27;<br/>        self       = &lt;tests_functional.test_functional.Tests_NewVistor testMethod=test_multiple_users_can_start_lists_at_different_urls&gt;<br/>        start_time = 1663540674.485981<br/>        table      = &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:55116/lists/the-only-list-in-the-world/&#x27;&gt; selector=&#x27;id=id_list_table&#x27;&gt;<br/>goat_venv/lib/python3.10/site-packages/playwright/sync_api/_generated.py:13160: in inner_text<br/>    self._sync(self._impl_obj.inner_text(timeout=timeout))<br/>        self       = &lt;Locator frame=&lt;Frame name= url=&#x27;http://localhost:55116/lists/the-only-list-in-the-world/&#x27;&gt; selector=&#x27;id=id_list_table&#x27;&gt;<br/>        timeout    = None<br/>goat_venv/lib/python3.10/site-packages/playwright/sync_api/_context_manager.py:67: in greenlet_main<br/>    self._loop.run_until_complete(self._connection.run_as_sync())<br/>        self       = &lt;playwright.sync_api._context_manager.PlaywrightContextManager object at 0x130aaeb90&gt;<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py:633: in run_until_complete<br/>    self.run_forever()<br/>        future     = &lt;Task pending name=&#x27;Task-1&#x27; coro=&lt;Connection.run_as_sync() running at /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/playwright/_impl/_connection.py:215&gt; wait_for=&lt;Future pending cb=[Task.task_wakeup()]&gt;&gt;<br/>        new_task   = True<br/>        self       = &lt;_UnixSelectorEventLoop running=False closed=False debug=False&gt;<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py:600: in run_forever<br/>    self._run_once()<br/>        old_agen_hooks = asyncgen_hooks(firstiter=None, finalizer=None)<br/>        self       = &lt;_UnixSelectorEventLoop running=False closed=False debug=False&gt;<br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py:1860: in _run_once<br/>    event_list = self._selector.select(timeout)<br/>        sched_count = 0<br/>        self       = &lt;_UnixSelectorEventLoop running=False closed=False debug=False&gt;<br/>        timeout    = None<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selectors.KqueueSelector object at 0x130aae7d0&gt;<br/>timeout = None<br/><br/>    def select(self, timeout=None):<br/>        timeout = None if timeout is None else max(timeout, 0)<br/>        # If max_ev is 0, kqueue will ignore the timeout. For consistent<br/>        # behavior with the other selector classes, we prevent that here<br/>        # (using max). See https://bugs.python.org/issue29255<br/>        max_ev = max(len(self._fd_to_key), 1)<br/>        ready = []<br/>        try:<br/>&gt;           kev_list = self._selector.control(None, max_ev, timeout)<br/><span class="error">E           Failed: Timeout &gt;60.0s</span><br/><br/>max_ev     = 3<br/>ready      = []<br/>self       = &lt;selectors.KqueueSelector object at 0x130aae7d0&gt;<br/>timeout    = None<br/><br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/selectors.py:562: Failed<br/> ------------------------------Captured stderr call------------------------------ <br/>
-+++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
-
-~~~~~~~~~~~ Stack of Thread-2 (process_request_thread) (6157463552) ~~~~~~~~~~~~
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 973, in _bootstrap
-    self._bootstrap_inner()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 1016, in _bootstrap_inner
-    self.run()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 953, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/core/servers/basehttp.py&quot;, line 102, in process_request_thread
-    super().process_request_thread(request, client_address)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 683, in process_request_thread
-    self.finish_request(request, client_address)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 360, in finish_request
-    self.RequestHandlerClass(request, client_address, self)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 747, in __init__
-    self.handle()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/core/servers/basehttp.py&quot;, line 204, in handle
-    self.handle_one_request()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/core/servers/basehttp.py&quot;, line 212, in handle_one_request
-    self.raw_requestline = self.rfile.readline(65537)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py&quot;, line 705, in readinto
-    return self._sock.recv_into(b)
-
-~~~~~~~~~~~~~~~~~~~~~~~ Stack of waitpid-0 (6140637184) ~~~~~~~~~~~~~~~~~~~~~~~~
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 973, in _bootstrap
-    self._bootstrap_inner()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 1016, in _bootstrap_inner
-    self.run()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 953, in run
-    self._target(*self._args, **self._kwargs)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/unix_events.py&quot;, line 1392, in _do_waitpid
-    pid, status = os.waitpid(expected_pid, 0)
-
-~~~~~~~~~~~~~~~~~~~~~~~~ Stack of Thread-1 (6123810816) ~~~~~~~~~~~~~~~~~~~~~~~~
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 973, in _bootstrap
-    self._bootstrap_inner()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py&quot;, line 1016, in _bootstrap_inner
-    self.run()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/django/test/testcases.py&quot;, line 1754, in run
-    self.httpd.serve_forever()
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socketserver.py&quot;, line 232, in serve_forever
-    ready = selector.select(poll_interval)
-  File &quot;/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/selectors.py&quot;, line 416, in select
-    fd_event_list = self._selector.poll(timeout)
-
-~~~~~~~~~~~~~~~~~~~~~~~ Stack of &lt;unknown&gt; (6106984448) ~~~~~~~~~~~~~~~~~~~~~~~~
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 285, in _perform_spawn
-    reply.run()
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 220, in run
-    self._result = func(*args, **kwargs)
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 967, in _thread_receiver
-    msg = Message.from_io(io)
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 432, in from_io
-    header = io.read(9)  # type 1, channel 4, payload 4
-  File &quot;/Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/lib/python3.10/site-packages/execnet/gateway_base.py&quot;, line 400, in read
-    data = self._read(numbytes - len(buf))
-
-+++++++++++++++++++++++++++++++++++ Timeout ++++++++++++++++++++++++++++++++++++
-<br/> -------------------------------Captured log call-------------------------------- <br/>WARNING  django.request:log.py:241 Not Found: /lists/the-only-list-in-the-world/<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_ItemModel::test_saving_and_retrieving_items</td>
-          <td class="col-duration">0.23</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_uses_home_template</td>
-          <td class="col-duration">0.29</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_can_save_a_POST_request</td>
-          <td class="col-duration">0.29</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_only_saves_items_when_necessary</td>
-          <td class="col-duration">0.32</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_redirects_after_POST</td>
-          <td class="col-duration">0.31</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_displays_all_list_items</td>
-          <td class="col-duration">0.33</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody></table></body></html>
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead></table></body></html>
