@@ -1,7 +1,12 @@
 
+# 9/18/2022
+- Started on section 7.4 "Iterating Towards the New Design"
+>> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_iterating_towards_the_new_design
 # 9/17/2022
-- RFER 22
+- Next sesh: Look at RFER 22
     - Currently, starting a new browser session with Playwright isn't working
+        - Update (9/18/2022):
+            - This might not be needed as its job is accomplished by new_context()
 
 - Started Section 7.2
 >> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_implementing_the_new_design_incrementally_using_tdd
