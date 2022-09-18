@@ -236,7 +236,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         ###
         edith_list_url = page.url # RFER 19
         regex_results_rematch = re.match(edith_list_url, r"/lists/.+") # RFER 20 && RFER 21
-        assert regex_results_rematch
+        assert regex_results_rematch # Currently unsure what it should be bool or not.
         
 
         """
@@ -246,6 +246,10 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         """
         ## We use a new browser session to make sure that no information of Edith's is coming through from cookies etc
         """
+        ### Selenium Style - B12
+        # self.browser.quit()
+        # self.browser = webdriver.Firefox()
+        ###
         context.close() # RFER 22
         self.browser.new_browser_cdp_session() # RFER 22
         context = self.browser.new_context()
@@ -253,8 +257,19 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         """
         # Francis visits the home page. There is no sign of Edith's list.
         """
+        ### Selenium Style - B13
+        # self.browser.get(self.live_server_url)
+        # page_text = self.browser.find_element_by_tag_name('body').text
+        # self.assertNotIn('Buy peacock feathers', page_text)
+        # self.assertNotIn('make a fly', page_text)
+        ###
         page:Page = context.new_page()
         page.goto(self.live_server_url)
         page_text = page.locator('body').inner_text()
         assert 'Buy peacock feathers' not in page_text
         assert 'make a fly' not in page_text
+
+        """
+        # Francis starts a new list by entering a new item.
+        He is less interesting than Edith...
+        """
