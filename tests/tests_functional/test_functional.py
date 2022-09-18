@@ -239,8 +239,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         # regex_results_rematch = re.match(edith_list_url, "/lists/.+") # RFER 20 && RFER 21
         # assert regex_results_rematch != None # Currently unsure what it should be bool or not.
         assert '/lists/' in edith_list_url # Workaround for assertRegex?
-        
-
+        expect(page)
         """
         # Now a new user, Francis, comes along to the site.
         """
@@ -308,9 +307,10 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         # self.assertNotEqual(francis_list_url, edith_list_url)
         ###
         francis_list_url = page.url
-        regex_results_rematch = re.match(francis_list_url, r'/lists/.+')
+        # regex_results_rematch = re.match(francis_list_url, r'/lists/.+')
+        # assert regex_results_rematch
+        assert '/lists/' in francis_list_url
 
-        assert regex_results_rematch
         assert francis_list_url != edith_list_url
 
         """
