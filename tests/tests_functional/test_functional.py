@@ -263,11 +263,20 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         # self.assertNotIn('Buy peacock feathers', page_text)
         # self.assertNotIn('make a fly', page_text)
         ###
+        check_text_1:str = 'Buy peacock feathers'
+        check_text_2:str = 'make a fly'
+
+        # Pythonic Way - A05
         page:Page = context.new_page()
         page.goto(self.live_server_url)
         page_text = page.locator('body').inner_text()
-        assert 'Buy peacock feathers' not in page_text
-        assert 'make a fly' not in page_text
+        assert check_text_1 not in page_text
+        assert check_text_2 not in page_text
+
+        # Playwright way - A05
+        locator_body = page.locator('body')
+        expect(locator_body).not_to_contain_text(check_text_1)
+        expect(locator_body).not_to_contain_text(check_text_2)
 
         """
         # Francis starts a new list by entering a new item.

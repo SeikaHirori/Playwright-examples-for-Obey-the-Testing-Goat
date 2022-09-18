@@ -1,5 +1,7 @@
 
 # 9/17/2022
+- RFER 22
+    - Currently, starting a new browser session with Playwright isn't working
 
 - Started Section 7.2
 >> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_implementing_the_new_design_incrementally_using_tdd
