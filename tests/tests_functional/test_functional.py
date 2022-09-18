@@ -236,8 +236,9 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         # self.assertRegex(edith_list_url, '/lists/.+')
         ###
         edith_list_url = page.url # RFER 19
-        regex_results_rematch = re.match(edith_list_url, r"/lists/.+") # RFER 20 && RFER 21
-        assert regex_results_rematch # Currently unsure what it should be bool or not.
+        # regex_results_rematch = re.match(edith_list_url, "/lists/.+") # RFER 20 && RFER 21
+        # assert regex_results_rematch != None # Currently unsure what it should be bool or not.
+        assert '/lists/' in edith_list_url # Workaround for assertRegex?
         
 
         """
