@@ -310,5 +310,26 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         assert regex_results_rematch
         assert francis_list_url != edith_list_url
 
-        
+        """
+        # Again, there is no trace of Edith's list
+        """
+        ### Selenium Style - B16
+        # page_text = self.browser.find_element_by_tag_name('body').text
+        # self.assertNotIn('Buy peacock feathers', page_text)
+        # self.assertIn('Buy milk', page_text)
+        ###
+        check_text_1:str = 'Buy peacock feathers'
+        check_text_2:str = 'Buy milk'
+        # Pythonic Style - A06
+        page_text = page.locator('body').inner_text()
+        assert check_text_1 not in page_text
+        assert check_text_2 in page_text
 
+        # Playwright Style - A06
+        locator_body:Locator = page.locator('body')
+        expect(locator_body).not_to_contain_text(check_text_1)
+        expect(locator_body).to_contain_text(check_text_2) # Not sure to use contain or have; check in later # FIXME
+
+        """
+        # Satisfied, they both go back to sleep.
+        """
