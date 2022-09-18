@@ -282,3 +282,14 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         # Francis starts a new list by entering a new item.
         He is less interesting than Edith...
         """
+        ### Selenium Style - B14
+        # inputbox = self.browser.find_element_by_id('id_new_item')
+        # inputbox.send_keys('Buy milk')
+        # inputbox.send_keys(Keys.ENTER)
+        # self.wait_for_row_in_list_table('1: Buy milk')
+        ###
+
+        locator_input_box = page.locator('id=id_new_item')
+        locator_input_box.type('Buy milk')
+        locator_input_box.press('Enter')
+        self.wait_for_row_in_list_table('1: Buy milk', page)
