@@ -242,7 +242,6 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         """
         # Now a new user, Francis, comes along to the site.
         """
-
         """
         ## We use a new browser session to make sure that no information of Edith's is coming through from cookies etc
         """
@@ -253,6 +252,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         context.close() # RFER 22
         self.browser.new_browser_cdp_session() # RFER 22
         context = self.browser.new_context()
+
 
         """
         # Francis visits the home page. There is no sign of Edith's list.
@@ -278,6 +278,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         expect(locator_body).not_to_contain_text(check_text_1)
         expect(locator_body).not_to_contain_text(check_text_2)
 
+
         """
         # Francis starts a new list by entering a new item.
         He is less interesting than Edith...
@@ -293,3 +294,21 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         locator_input_box.type('Buy milk')
         locator_input_box.press('Enter')
         self.wait_for_row_in_list_table('1: Buy milk', page)
+
+
+        """
+        # Francis gets his own unique URL
+        """
+        ### Selenium Style - B15
+        # francis_list_url = self.browser.current_url
+        # self.assertRegex(francis_list_url, '/lists/.+')
+        # self.assertNotEqual(francis_list_url, edith_list_url)
+        ###
+        francis_list_url = page.url
+        regex_results_rematch = re.match(francis_list_url, r'/lists/.+')
+
+        assert regex_results_rematch
+        assert francis_list_url != edith_list_url
+
+        
+
