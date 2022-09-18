@@ -1,6 +1,9 @@
 
 # 9/18/2022
 
+- Starting section 7.6 - Green? Refactor
+>> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_green_refactor
+
 - Installed pytest-timeout and the reasons:
     - If a page doesn't properly exist or not redirected properly, it will loop infinitely and not timeout.
         - Reference commit:
