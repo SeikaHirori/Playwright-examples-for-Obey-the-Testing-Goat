@@ -70,6 +70,10 @@ class Tests_HomePage:
 @pytest.mark.django_db
 class Test_LiveView:
 
+    def test_use_list_template(self):
+        response:HttpResponse = Client().get('/lists/the-only-list-in-the-world/')
+        pdj_asserts.assertTemplateUsed(response, 'lists/list.html')
+
     def test_displays_all_list_items(self):
         itemey_1 = 'itemey 1'
         itemey_2 = 'itemey 2'

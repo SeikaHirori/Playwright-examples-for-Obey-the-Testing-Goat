@@ -1,7 +1,9 @@
 
 # 9/18/2022
+- Starting Section 7.7 - Another Small Step: A Separate Template for Viewing Lists
+>> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_another_small_step_a_separate_template_for_viewing_lists
 
-- Starting section 7.6 - Green? Refactor
+- ~~Starting ~~section 7.6 - Green? Refactor
 >> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_green_refactor
 
 - Installed pytest-timeout and the reasons:
