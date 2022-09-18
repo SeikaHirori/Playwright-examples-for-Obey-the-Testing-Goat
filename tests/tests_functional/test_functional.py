@@ -249,8 +249,9 @@ class Tests_NewVistor(StaticLiveServerTestCase):
         # self.browser.quit()
         # self.browser = webdriver.Firefox()
         ###
+        page.close()
         context.close() # RFER 22
-        self.browser.new_browser_cdp_session() # RFER 22
+        # self.browser.new_browser_cdp_session() # RFER 22 # Maybe this is not neeeded as "self.browser.new_context()" handles starting a new session with clean cookies.
         context = self.browser.new_context()
 
 

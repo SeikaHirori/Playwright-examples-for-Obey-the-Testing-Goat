@@ -140,4 +140,5 @@ How to setup timeout for Playwright
 > self.browser.quit()
 > self.browser = webdriver.Firefox()
 
-- Second link starts a browser session
+- ~~ Second link starts a browser session ~~
+- using "self.browser.new_browser_cdp_session()" might not be needed, and is additional hassle. Just starting a new context might be better.
