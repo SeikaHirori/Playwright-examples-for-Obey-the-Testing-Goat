@@ -143,3 +143,7 @@ How to setup timeout for Playwright
 - ~~ Second link starts a browser session ~~
 - using "self.browser.new_browser_cdp_session()" might not be needed, and is additional hassle. Just starting a new context might be better.
     - Will test more after clearing first TDD test regex 
+
+# RFER 23
+- Pytest-timeout info
+>> https://pypi.org/project/pytest-timeout/

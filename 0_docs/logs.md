@@ -1,5 +1,12 @@
 
 # 9/18/2022
+
+- Installed pytest-timeout and the reasons:
+    - If a page doesn't properly exist or not redirected properly, it will loop infinitely and not timeout.
+        - Reference commit:
+            > 3e6ad3c13d84aa7b3cc637d090710a6b5c09a416
+        - It's possible that either Playwright, Pytest, or Django's test tool doesn't know what to do if the redirect doesn't work as intended with how the current test setup is at the moment.
+
 - Started on section 7.4 "Iterating Towards the New Design"
 >> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_iterating_towards_the_new_design
 # 9/17/2022
