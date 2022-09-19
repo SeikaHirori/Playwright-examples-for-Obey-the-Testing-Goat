@@ -429,7 +429,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 19-Sep-2022 at 00:12:47 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 19-Sep-2022 at 00:14:26 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -448,8 +448,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.10.5</td></tr></table>
     <h2>Summary</h2>
-    <p>7 tests ran in 51.83 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">6 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>0 tests ran in 1.73 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -459,67 +459,4 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable" col="duration">Duration</th>
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
-          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Test_LiveView::test_displays_all_list_items</td>
-          <td class="col-duration">0.65</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>self = &lt;tests_unit.test_unit_lists.Test_LiveView object at 0x103ff1d80&gt;<br/><br/>    def test_displays_all_list_items(self):<br/>        itemey_1 = &#x27;itemey 1&#x27;<br/>        itemey_2 = &#x27;itemey 2&#x27;<br/>    <br/>        Item.objects.create(text=itemey_1)<br/>        Item.objects.create(text=itemey_2)<br/>    <br/>        response: HttpResponse = Client().get(&#x27;/lists/the-only-list-in-the-world/&#x27;)<br/>    <br/>&gt;       pdj_asserts.assertContains(response, itemey_1)<br/><br/>itemey_1   = &#x27;itemey 1&#x27;<br/>itemey_2   = &#x27;itemey 2&#x27;<br/>response   = &lt;HttpResponse status_code=200, &quot;text/html; charset=utf-8&quot;&gt;<br/>self       = &lt;tests_unit.test_unit_lists.Test_LiveView object at 0x103ff1d80&gt;<br/><br/>tests/tests_unit/test_unit_lists.py:87: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>goat_venv/lib/python3.10/site-packages/pytest_django/asserts.py:23: in assertion_func<br/>    return func(*args, **kwargs)<br/>        args       = (&lt;HttpResponse status_code=200, &quot;text/html; charset=utf-8&quot;&gt;, &#x27;itemey 1&#x27;)<br/>        func       = &lt;bound method SimpleTestCase.assertContains of &lt;django.test.testcases.TestCase testMethod=run&gt;&gt;<br/>        kwargs     = {}<br/>goat_venv/lib/python3.10/site-packages/django/test/testcases.py:658: in assertContains<br/>    self.assertTrue(<br/>        count      = None<br/>        html       = False<br/>        msg_prefix = &#x27;&#x27;<br/>        real_count = 0<br/>        response   = &lt;HttpResponse status_code=200, &quot;text/html; charset=utf-8&quot;&gt;<br/>        self       = &lt;django.test.testcases.TestCase testMethod=run&gt;<br/>        status_code = 200<br/>        text       = &#x27;itemey 1&#x27;<br/>        text_repr  = &quot;&#x27;itemey 1&#x27;&quot;<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;django.test.testcases.TestCase testMethod=run&gt;, expr = False<br/>msg = &quot;False is not true : Couldn&#x27;t find &#x27;itemey 1&#x27; in response&quot;<br/><br/>    def assertTrue(self, expr, msg=None):<br/>        &quot;&quot;&quot;Check that the expression is true.&quot;&quot;&quot;<br/>        if not expr:<br/>            msg = self._formatMessage(msg, &quot;%s is not true&quot; % safe_repr(expr))<br/>&gt;           raise self.failureException(msg)<br/><span class="error">E           AssertionError: False is not true : Couldn&#x27;t find &#x27;itemey 1&#x27; in response</span><br/><br/>expr       = False<br/>msg        = &quot;False is not true : Couldn&#x27;t find &#x27;itemey 1&#x27; in response&quot;<br/>self       = &lt;django.test.testcases.TestCase testMethod=run&gt;<br/><br/>/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/unittest/case.py:687: AssertionError[gw6] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_ItemModel::test_saving_and_retrieving_items</td>
-          <td class="col-duration">0.61</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw0] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Test_LiveView::test_use_list_template</td>
-          <td class="col-duration">0.64</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw5] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_only_saves_items_when_necessary</td>
-          <td class="col-duration">0.66</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw4] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_redirects_after_POST</td>
-          <td class="col-duration">0.69</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw3] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_uses_home_template</td>
-          <td class="col-duration">0.69</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw1] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody>
-      <tbody class="passed results-table-row">
-        <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">tests/tests_unit/test_unit_lists.py::Tests_HomePage::test_can_save_a_POST_request</td>
-          <td class="col-duration">0.67</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/>[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10[gw2] darwin -- Python 3.10.5 /Users/watoart/VSCode/Obey_the_Testing_Goat/goat_venv/bin/python3.10<br/></div></td></tr></tbody></table></body></html>
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead></table></body></html>

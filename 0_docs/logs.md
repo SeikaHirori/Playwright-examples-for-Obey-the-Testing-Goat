@@ -1,5 +1,10 @@
 
 # 9/18/2022
+
+- ENDING SESH:
+    - Stopping at:
+        >> That gets the tests back to passing (green). Now let’s do a little more tidying up (refactoring). We said the home page doesn’t need to list items, it only needs the new list input field, so we can remove some lines from lists/templates/home.html, and maybe slightly tweak the h1 to say "Start a new To-Do list":
+
 - Starting Section 7.7 - Another Small Step: A Separate Template for Viewing Lists
 >> https://www.obeythetestinggoat.com/book/chapter_working_incrementally.html#_another_small_step_a_separate_template_for_viewing_lists
 
