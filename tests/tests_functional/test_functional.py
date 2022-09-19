@@ -17,7 +17,7 @@ from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
 MAX_WAIT_milliseconds:int = 10000 
 
-@pytest.mark.timeout(60) # RFER 23
+@pytest.mark.timeout(30) # RFER 23
 class Tests_NewVistor(StaticLiveServerTestCase):
 
     @classmethod
@@ -208,6 +208,7 @@ class Tests_NewVistor(StaticLiveServerTestCase):
 
         page.close() # FIXME - This might not be needed? 
         assert "Not complete" == ":'[", f"finish the test!"
+
 
     def test_multiple_users_can_start_lists_at_different_urls(self):
         """

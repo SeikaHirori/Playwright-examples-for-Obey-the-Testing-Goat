@@ -15,7 +15,7 @@ from lists.models import Item
 # from django.db.models import QuerySet
 from django.db.models.query import QuerySet  # RFER 11
 
-@pytest.mark.timeout(60)
+@pytest.mark.timeout(30)
 @pytest.mark.django_db  # RFER 10
 class Tests_ItemModel:
 
@@ -36,7 +36,7 @@ class Tests_ItemModel:
         assert first_saved_item.text == 'The first (ever) list item'
         assert second_saved_item.text == 'Item the second'
 
-@pytest.mark.timeout(60)
+@pytest.mark.timeout(30)
 @pytest.mark.django_db # RFER 10
 class Tests_HomePage:
 
@@ -67,7 +67,7 @@ class Tests_HomePage:
         response: HttpResponse = Client().get('/')
         assert Item.objects.count() == 0
 
-@pytest.mark.timeout(60)
+@pytest.mark.timeout(30)
 @pytest.mark.django_db
 class Test_LiveView:
 
