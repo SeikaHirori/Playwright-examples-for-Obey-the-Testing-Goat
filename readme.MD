@@ -8,7 +8,7 @@
 # Objectives of Repository
 - Instead of using Selenium and Python's unittest, Playwright and Pytest are used instead while following OtTG.
 - This repo provides reference/ examples to how Playwright and Pytest could subsitute Selenium and Python's unittest.
-    - ***DISCLAIMER***: The code I wrote while following the book may have better alternatives. I recommend looking at the official Playwright documentation to confirm the needed tools.
+    - ***DISCLAIMER***: There will be better alteratives than the code I wrote. I recommend looking at the official Playwright documentation to confirm the needed tools for the appropriate situation.
     
 - Chapters finished so far:
     - Part 1: The Basics of TDD and Django
