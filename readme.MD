@@ -1,13 +1,22 @@
-# Book:
->> https://www.obeythetestinggoat.com/book/part1.harry.html
+# Post-reflection blog
+> ***TBA***
 
-> Pytest code to run with --showlocals:
-pytest -n auto --showlocals --html=report.html --html=report.html --self-contained-html
+# Book used
+- Obey the Testing Goat (OtTG)
+    > https://www.obeythetestinggoat.com/book/part1.harry.html
 
-> Pytest code to run without --showlocals:
-pytest -n auto --html=report.html --html=report.html --self-contained-html
+# Objectives of Repository
+- Instead of using Selenium and Python's unittest, Playwright and Pytest are used instead while following OtTG.
+- This repo provides reference to how Playwright and Pytest could subsitute Selenium and Python's unittest.
+    - ***DISCLAIMER***: The code I wrote while following the book may have better alternatives. I recommend looking at the official Playwright documentation to confirm the needed tools.
+
+- Chapters finished so far:
+    - Part 1: The Basics of TDD and Django
 
 # Index
+
+- RFER
+    - "# RFER XX" seen in the code is used as a reference to documentation and materials used to help write the code.
 
 - A## - Assertion styles between Python and Playwright
     - Note about the Python's unit testing framework being used here: 
